@@ -27,7 +27,10 @@ html, body {
 	color: #393939;
 }
 
-
+body {
+    margin: 0;
+    padding: 0;
+ }
 
 
 
