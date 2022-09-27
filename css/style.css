@@ -11,10 +11,10 @@ logo img{
     object-fit: cover; /* 画像のトリミング */
 }
 
-logotohome img{
-    border-radius: 70%;
-    width: 70px;
-    height: 70px;
+header img{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
     object-fit: cover; /* 画像のトリミング */
 }
 
@@ -22,33 +22,35 @@ logotohome img{
 
 /* ========== common ========== */
 html, body {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: sans-serif;
 	color: #393939;
-    margin-left: 15px;
-    margin-bottom: 40px;
-	background: #efefef;
-}
-h1{
-    text-indent: 0em;
-}
-h2{
-    margin-left: 1em;
-    margin-top: 1em;
-}
-h3{
-    margin-left: 2em;
-}
-div{
-    margin-top: 1em;
-    margin-left: 3em;
-}
-p{
-    margin-left: 3em;
-}
-span.blackback{
-    text-indent: 3em;
-    background: #393939;
-    color: #efefef;
 }
 
+
+
+
+
+.first-view{
+    height: calc(100vh - 100px);
+    background-image: url(../de12/images/24744505_m.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.first-view-text{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-bottom: 80px;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #eee9e0;
+    font-size: 39px;
+    line-height: 115px;
+}
