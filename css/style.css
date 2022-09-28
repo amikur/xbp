@@ -13,9 +13,11 @@ logo img{
 
 header img{
     border-radius: 100%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* 画像のトリミング */
+    width: 80px;
+    height: 80px;
+    object-fit: cover;/* 画像のトリミング */
+    margin-left: 70px;
+    margin-top: 10px;
 }
 
 
@@ -25,7 +27,7 @@ html, body {
 	font-size: 20px;
 	font-family: sans-serif;
 	color: #0f0e0e;
-    background-color: rgba(9, 10, 9, 0.466);
+    background-color: rgba(241, 221, 176, 0.363);
 }
 
 body {
@@ -69,6 +71,15 @@ body {
     line-height: 115px;
 }
 
+.lead {
+    max-width: 1200px;
+    margin: 70px auto;
+}
+.lead p {
+    line-height: 2;
+    text-align: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
 .contents {
     background-color: rgb(212, 201, 188);
     padding-top: 45px;
