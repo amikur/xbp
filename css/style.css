@@ -33,6 +33,11 @@ body {
     padding: 0;
  }
 
+ .first-view-text {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: bold;
+ }
+
 
 
 .first-view{
