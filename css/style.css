@@ -37,7 +37,12 @@ body {
     font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: bold;
  }
-
+.item-list {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+.contents {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
 
 
 .first-view{
