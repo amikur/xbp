@@ -108,14 +108,24 @@ body {
 
 .item-list dt {
     font-weight: bold;
+    text-align: center;
 }
 
 .item-list dd {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 25px;
     margin-top: 10px;
+    text-align: center;
 }
 
 .item-list {
     list-style-type: none
+}
+
+img[src="./de12/images/21830aIMGL99841974_TP_V.jpg"] {
+    border-radius: 20%;
+}
+
+img[src="./de12/images/step05.png"] {
+    border-radius: 20%;
 }
