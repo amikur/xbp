@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+   
+    <title>jquery</title>
+    <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+   
+ // スクロールすると上部にヘッダー固定
+    $(function () {
+      $(window).on("scroll", function () {
+        // 最初のh2を通過したらclassを付与 
+        const sliderHeight = $("h2:first").height();
+        if (sliderHeight - 30 < $(this).scrollTop()) {
+          $(".header").addClass("headerColorScroll");
+          $("#logo").addClass("headerColorScroll");
+        } else {
+          $(".header").removeClass("headerColorScroll");
+          $("#logo").removeClass("headerColorScroll");
+        }
+      });
+    });
+</body>
+</html>

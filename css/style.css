@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
 /* フォントを指定したいところで */
 
-logo img{
+.logo img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover; /* 画像のトリミング */
 }
 
-header img{
+.header img {
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -48,7 +48,7 @@ body {
 
 
 .first-view{
-    height: calc(100vh - 100px);
+    height:100vh;
     background-image: url(../de12/images/24744505_m.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -153,17 +153,13 @@ img[src="./de12/images/step05.png"] {
 }
 
 @media (max-width: 800px) {
-    header img{
-        border-radius: 100%;
-        width: 80px;
-        height: 80px;
-        object-fit: cover;/* 画像のトリミング */
-       margin-left: 1px;
-        margin-top: 5px;
+    .header img {
+        margin-left: 5px;
+        width: 50px;
+        height: 50px;
     }
-    
-    .first-view{
-        height: calc(100vh - 50px);
+.first-view {
+        height:100vh;
         background-image: url(../de12/images/24744505_m\ -\ コピー.jpg);
         align-items: flex-start;
     }
@@ -172,13 +168,13 @@ img[src="./de12/images/step05.png"] {
     padding-left: 20px;
 }
 .first-view-text h1 {
-    font-size: 32px;
+    font-size: 30px;
     line-height: 40px;
 }
 .first-view-text p {
     font-size: 18px;
     margin-top: 1px;
-    margin-left: 190px;
+    
 }
 .lead {
     padding-left: 20px;
@@ -199,4 +195,28 @@ img[src="./de12/images/step05.png"] {
     overflow: scroll;
 }
 }
+   
+
+.header {
+        animation: top-in-basic 1 0.4s 0s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .h1.dfont.headerColorScroll  {
+        animation: left-in-basic 1 0.8s 0s;
+    }
+
+
+   
+    
+    
+    @keyframes top-in-basic {
+      0%{transform: translateY(-2000px)}
+      100%{transform: translateY(0px)}
+    }
+    @keyframes left-in-basic {
+      0%{transform: translateX(-2000px)}
+      100%{transform: translateX(0px)}
+    }
     
