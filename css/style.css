@@ -150,3 +150,52 @@ img[src="./de12/images/21830aIMGL99841974_TP_V.jpg"] {
 img[src="./de12/images/step05.png"] {
     border-radius: 20%;
 }
+
+@media (max-width: 800px) {
+    header img{
+        border-radius: 100%;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;/* 画像のトリミング */
+       margin-left: 1px;
+        margin-top: 5px;
+    }
+    
+    .first-view{
+        height: calc(100vh - 50px);
+        background-image: url(../de12/images/24744505_m\ -\ コピー.jpg);
+        align-items: flex-start;
+    }
+.first-view-text {
+    padding-top: 140px;
+    padding-left: 20px;
+}
+.first-view-text h1 {
+    font-size: 32px;
+    line-height: 40px;
+}
+.first-view-text p {
+    font-size: 18px;
+    margin-top: 1px;
+    margin-left: 190px;
+}
+.lead {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 14px;
+}
+.lead p {
+    text-align: left;
+    
+}
+.item-list {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 60px;
+    overflow: scroll;
+}
+}
+    
