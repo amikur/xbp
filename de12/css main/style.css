@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* 冒頭でimport */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+/* フォントを指定したいところで */
+
+logo img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+logotohome img{
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+
+
+/* ========== common ========== */
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(241, 221, 176, 0.363);
+}
+
+.title {
+    height: 310px;
+    background-image: url(../images/PAK86_smonitatocode20140517_TP_V.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.main {
+    align-items: center;
+}
+
+.contents {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding-top: 80px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+.contents h2::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: black;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.list {
+ 
+    width: 300px;
+    height: 200px;
+    
+   
+
+}
+
+
+
+ ul, ol {
+    background: #fffcf4;
+    border-radius :8px;/*角の丸み*/
+    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    
+  }
+ ul li, ol li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    
+    
+  }
