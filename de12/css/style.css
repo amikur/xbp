@@ -22,12 +22,10 @@ logotohome img{
 
 /* ========== common ========== */
 html, body {
-	font-size: 16px;
-	font-family: sans-serif;
-	color: #393939;
-    margin-left: 15px;
-    margin-bottom: 40px;
-	background: #efefef;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff86;
+	
 
 }
 h1{
@@ -48,9 +46,26 @@ div{
 p{
     margin-left: 3em;
 }
-span.blackback{
-    text-indent: 3em;
-    background: #393939;
-    color: #efefef;
+
+
+
+.header-de12 {
+    width: auto;
+    height: 120px;
+    
+    background-color: rgb(255, 255, 255);
 }
 
+.header-text {
+    font-size: 16px;
+	font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 60px;
+}
+
+.main-de12 {
+    background-color: #f1ddc15b;
+    margin: 0;
+    padding: 100px;
+}
