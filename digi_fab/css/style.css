@@ -21,34 +21,73 @@ logotohome img{
 
 
 /* ========== common ========== */
-html, body {
-	font-size: 16px;
-	font-family: sans-serif;
-	color: #393939;
-    margin-left: 15px;
-    margin-bottom: 40px;
-	background: #efefef;
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(241, 221, 176, 0.363);
 }
-h1{
-    text-indent: 0em;
+
+.title {
+    height: 310px;
+    background-image: url(../images/keyvisual-750x370-wide.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #000000;
 }
-h2{
-    margin-left: 1em;
-    margin-top: 1em;
+
+.title h1 {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
 }
-h3{
-    margin-left: 2em;
+
+
+
+.contents {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding-top: 80px;
+    font-size: 20px;
+    text-align: center;
+    
 }
-div{
-    margin-top: 1em;
-    margin-left: 3em;
+
+.contents h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: black;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
-p{
-    margin-left: 3em;
-}
-span.blackback{
-    text-indent: 3em;
-    background: #393939;
-    color: #efefef;
-}
+
+
+
+
+ ul, ol {
+    background: #fffcf4;
+    border-radius :8px;/*角の丸み*/
+    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    
+  }
+ ul li, ol li {
+    line-height: 0.5;
+    padding: 0.5em 0;
+    
+    }
+
+  .list {
+    display: flex;
+    justify-content: center;
+   font-size: 25px;
+    
+  }
+  
 

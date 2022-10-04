@@ -27,7 +27,7 @@ html, body {
 	font-size: 20px;
 	font-family: sans-serif;
 	color: #0f0e0e;
-    background-color: rgba(241, 221, 176, 0.363);
+    background-color: rgba(221, 230, 172, 0.178);
 }
 
 body {
@@ -82,7 +82,7 @@ body {
     font-family: 'Zen Maru Gothic', sans-serif;
 }
 .contents {
-    background-color: rgb(212, 201, 188);
+    background-color: rgba(223, 210, 175, 0.596);
     padding-top: 45px;
     padding-bottom: 55px;
 
