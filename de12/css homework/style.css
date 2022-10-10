@@ -69,3 +69,8 @@ p{
     margin: 0;
     padding: 100px;
 }
+
+.street-text {
+    font-size: 18px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
