@@ -116,7 +116,10 @@ body {
 }
 .lead {
     max-width: 1200px;
-    margin: 70px auto;
+    margin: 150px auto;
+    font-size: 25px;
+    margin-bottom: 200px;
+    
 }
 .lead p {
     line-height: 2;
@@ -127,6 +130,7 @@ body {
     background-color: rgba(180, 172, 156, 0.596);
     padding-top: 45px;
     padding-bottom: 55px;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -218,15 +222,25 @@ img[src="./de12/images/step05.png"] {
     margin-top: 1px;
     
 }
+
+#animation {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    }
 .lead {
     padding-left: 20px;
     padding-right: 20px;
     font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }
 .lead p {
     text-align: left;
-    
+    font-size: px;
 }
 .item-list {
     display: flex;
@@ -262,3 +276,33 @@ img[src="./de12/images/step05.png"] {
       100%{transform: translateX(0px)}
     }
     
+    #animation {
+        text-align: center;
+        margin-top: 300px;
+        font-size: 80px;
+        font-weight: bold;
+        color: #000000;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .fadeInDown {
+         -webkit-animation-fill-mode:both;
+         -ms-animation-fill-mode:both;
+         animation-fill-mode:both;
+         -webkit-animation-duration:1s;
+         -ms-animation-duration:1s;
+         animation-duration:1s;
+         -webkit-animation-name: fadeInDown;
+         animation-name: fadeInDown;
+         visibility: visible !important;
+        }
+        @-webkit-keyframes fadeInDown {
+         0% { opacity: 0; -webkit-transform: translateY(-20px); }
+         100% { opacity: 1; -webkit-transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+         0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+         100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+        }
