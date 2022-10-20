@@ -128,33 +128,92 @@ body {
 }
 .contents {
     background-color: rgba(180, 172, 156, 0.596);
-    padding-top: 45px;
+    padding-top: 100px;
     padding-bottom: 55px;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 
 
-.contents h2 {
-    font-size: 30px;
+
+
+/*contentsフェードインここから*/
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+    font-size: 150px;
     font-weight: bold;
-    text-align: center;
+    margin-left: 60px;
+
 }
 
-.contents h2::after {
+/*左右のアニメーション*/
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+	animation-name:slideTextX100;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+	transform: translateX(-100%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+	animation-name:slideTextX-100;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+  from {
+	transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+/*下線保留*/
+
+.slide-in_inner-::after {
     content: '';
     display: block;
-    width: 36px;
+    width: 180px;
     height: 3px;
     background-color: black;
-    margin-top: 20px;
-    margin-left: auto;
+    margin-top: 40px;
+    margin-left: 200px;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 
 .item-list {
     display: flex;
-    padding-top: 40px;
+    padding-top: 80px;
     padding-bottom: 10px;
     padding-left: 60px;
     padding-right: 60px;
