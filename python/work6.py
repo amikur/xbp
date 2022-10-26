@@ -34,7 +34,7 @@ if 1<people<5:
     print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
     # カード配る
     import random
-    num = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '10', '10', '10')
+    num = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10)
     patt=("♥","♣,","♤","♢")
     print("ディーラー:はじめに、私のカードを2枚引き、そのうち１枚をお見せします。")
     print(random.sample(patt, k=1)) 
@@ -45,22 +45,35 @@ if 1<people<5:
     choices=input("　　　　　　準備はよろしいですか？ yes/no:")
     if choices in ['y', 'ye', 'yes']:
       print(random.choices(patt, k=1))
-      a=random.sample(num, k=1) 
+      a=random.sample(num, k=1)
       print(a)
       print("と、")
       print(random.choices(patt, k=1))
       b=random.sample(num, k=1)
       print(b)
       print("です。")
-      print(a + b)
+      print("合計は、")
+      total=(sum(a+b))
+      print(total)
+      print("です。")
       choices=input("ディーラー：カードを追加しますか？ yes/no:")
       # カードを追加する
-    if choices in ['y', 'ye', 'yes']:
-      print(random.choices(patt, k=1))
-      print(random.sample(num, k=1) )
+      if choices in ['y', 'ye', 'yes']:
+        print(random.choices(patt, k=1))
+        c=random.sample(num, k=1) 
+        print(c)
+        total=(sum(a+b+c))
+        print("合計は、")
+        print(total)
+        print("です。")
 
-      if total>21:
-        print("ディーラー：21を超えてしまいました。残念ながら負けです。")
+
+        if total>21:    
+          print("ディーラー：21を超えてしまいました。残念ながら負けです。")
+          zzz=(input("次へ進みます。yを押してください"))
+
+        else:
+          zzz=(input("次へ進みます。yを押してください"))
 
 # カードを追加しない
     else:
