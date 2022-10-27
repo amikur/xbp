@@ -25,7 +25,7 @@ if 1<people<5:
     print("最初に、ディーラーがプレイヤー側・ディーラー側にそれぞれカードを2枚ずつ配ります。この時、ディーラー側のカードは1枚が伏せられた状態になります。")
     print("プレイヤーの皆様は、合計数が21になるまで何回でもカードを引くことができますが、21をオーバーした瞬間負けになってしまいます。また、合計数が同じだった場合は引き分けとなります。")
     print("プレイヤーの皆様がカードを引くフェーズが終了したら、ディーラーは自分のカードの合計数が「１７」を超えるまで引き続けます。")
-    print("ディーラーよりプレイヤーの方が合計数が高い、もしくは、ディーラーが21をオーバーしたら、プレイヤーの皆様の勝ちです")
+    print("ディーラーよりプレイヤーの方が合計数が高い、もしくは、ディーラーが21をオーバーしたら、プレイヤーの皆様の勝ちです。")
     print("カードの数字が、「２～１０」までは、数字のままカウントします。")
     print("カードの数字が、「J・Q・K」の場合、すべて「10」としてカウントします。")
     print("カードの数字が、「A」の場合、「1」としてカウントします。")
@@ -35,7 +35,7 @@ if 1<people<5:
     # カード配る
     import random
     num = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10)
-    patt=("♥","♣,","♤","♢")
+    patt=("♥","♣","♤","♢")
     print("ディーラー:はじめに、私のカードを2枚引き、そのうち１枚をお見せします。")
     deapat=random.sample(patt, k=1)
     dea=random.sample(num, k=1)
@@ -57,7 +57,7 @@ if 1<people<5:
       print("合計は、")
       total1=(sum(a+b))
       print(total1,"点です。")
-      choices=input("ディーラー：カードを追加しますか1？ yes/no:")
+      choices=input("ディーラー：カードを追加しますか？ yes/no:")
       # カードを追加する
       if choices in ['y', 'ye', 'yes']:
         print(random.choices(patt, k=1))
@@ -153,7 +153,7 @@ if 1<people<5:
             print("python：あっ、、21超えたよww残念だったねｗ")
             zzz=(input("次行こう！！！！早くa押して"))
 
-          choices=input("python：カード引く？どっちにすんの？ yes/no:")
+          choices=input("python：カード引く？どっちにすんの？あ、これコーディングしたやつバカだからオーバーしてもこの文出るときあんだ。そんときは[no]押せよ～ yes/no:")
             # カードを追加する
           if choices in ['y', 'ye', 'yes']:
             print(random.choices(patt, k=1))
@@ -169,7 +169,7 @@ if 1<people<5:
               zzz=(input("次へ進みます。aを押してください"))
 
             elif total1<22:
-              choices=input("python：カード引く？どっちにすんの？ yes/no:")
+              choices=input("python：カード引く？どっちにすんの？あ、これコーディングしたやつバカだからオーバーしてもこの文出るときあんだ。そんときは[no]押せよ～ yes/no:")
           # カードを追加する
               if choices in ['y', 'ye', 'yes']:
                 print(random.choices(patt, k=1))
@@ -413,6 +413,16 @@ if 1<people<5:
             print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
             print("ディーラー：",name1,"さんの合計は、",total1,"です。おめでとうございます。今回のゲームは",name1,"さんの勝ちです。")
 
+          elif total1>21 and total2<22 and total2<totaldea:
+            # プレイヤー１オーバー且つプレイヤー２ディーラーに負け
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
+          
+          elif total2>21 and total2<22 and total2<totaldea:
+            # プレイヤー２オーバー且つプレイヤー１ディーラーに負け
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")
+
           elif 22>total1==totaldea and 22>total2==totaldea:
             # 引き分け
             print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。今回のゲームは引き分けです。")
@@ -483,6 +493,16 @@ if 1<people<5:
             print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
             print("ディーラー：",name1,"さんの合計は、",total1,"です。おめでとうございます。今回のゲームは",name1,"さんの勝ちです。")
 
+          elif total1>21 and total2<22 and total2<totaldea2:
+            # プレイヤー１オーバー且つプレイヤー２ディーラーに負け
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
+          
+          elif total2>21 and total2<22 and total2<totaldea2:
+            # プレイヤー２オーバー且つプレイヤー１ディーラーに負け
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")
+
           elif 22>total1==totaldea2 and 22>total2==totaldea2:
             # 引き分け
             print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。今回のゲームは引き分けです。")
@@ -507,9 +527,9 @@ if 1<people<5:
             # プレーヤー１勝ち且つプレイヤー２勝ち
             print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
 
-
+        num2 = ( 8, 9, 10, 10, 10)
         if totaldea2<17:
-          dea4=random.sample(num, k=1)
+          dea4=random.sample(num2, k=1)
           deapat4=random.sample(patt, k=1)
           print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat4,"の",dea4,"です。")
           totaldea3=(sum(dea+dea2+dea3+dea4))
@@ -526,7 +546,7 @@ if 1<people<5:
               # ディーラー　プレイヤー１　プレイヤー２オーバー
               print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")
             else:
-              print("ディーラー：今回のゲームは、",name1,"さん、",name2,"さんの勝ちです。")
+              print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは、",name1,"さん、",name2,"さんの勝ちです。")
 
           if 16<totaldea3<22:
             print("ディーラー：準備は整いました。勝負です。")
@@ -548,6 +568,16 @@ if 1<people<5:
               # プレイヤー２オーバー且つプレイヤー１ディーラーに勝つ
               print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
               print("ディーラー：",name1,"さんの合計は、",total1,"です。おめでとうございます。今回のゲームは",name1,"さんの勝ちです。")
+
+            elif total1>21 and total2<22 and total2<totaldea3:
+            # プレイヤー１オーバー且つプレイヤー２ディーラーに負け
+              print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+              print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
+          
+            elif total2>21 and total2<22 and total2<totaldea3:
+            # プレイヤー２オーバー且つプレイヤー１ディーラーに負け
+              print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+              print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")
 
             elif 22>total1==totaldea3 and 22>total2==totaldea3:
               # 引き分け
@@ -582,30 +612,14 @@ if 1<people<5:
             elif 22>total2>totaldea3 and 22>total1>totaldea3:
               # プレーヤー１勝ち且つプレイヤー２勝ち
               print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
-        
-
-
-        
-
-
-
-
-    
-
-        
-        
-            
-   
-            
-    
-
+  
 
   # プレイ人数が3名の場合
   if 2<people<4:
     name3=input("プレイヤー1さん、名前を入力してください")
     name4=input("プレイヤー2さん、名前を入力してください")
     name5=input("プレイヤー3さん、名前を入力してください")
-    print(name3,"さん",name4,"さん",name5,"さんですね。それではゲームをはじめるとしましょう。") 
+    print(name3,"さん",name4,"さん",name5,"さんですね。申し訳ございません。まだ3名・4名では遊べません。") 
 
 
 # プレイ人数が4名の場合
@@ -614,7 +628,7 @@ if 1<people<5:
     name7=input("プレイヤー2さん、名前を入力してください")
     name8=input("プレイヤー3さん、名前を入力してください")
     name9=input("プレイヤー4さん、名前を入力してください")
-    print(name6,"さん",name7,"さん",name8,"さん",name9,"さんですね。それではゲームをはじめるとしましょう。") 
+    print(name6,"さん",name7,"さん",name8,"さん",name9,"さんですね。申し訳ございません。まだ3名・4名では遊べません。") 
 
 
 
@@ -724,3 +738,108 @@ else:
                 print("合計は、")
                 print(total1,"点です。")
                 zzz=(input("次へ進みます。aを押してください"))
+                # ここまで
+
+      print("ディーラー：",name,"さん、勝負の時間です。")
+      zzz=(input("準備はよろしいですか？yを押してください"))
+      dea2=random.sample(num, k=1)
+      deapat2=random.sample(patt, k=1)
+      print("ディーラー：私が最初に引いたカードは、",deapat,"の",dea,"です。そして、もう１枚のカードは",deapat2,"の",dea2,"です。")
+      totaldea=(sum(dea+dea2))
+      print("ディーラー：現在の私の合計は、",totaldea,"です。")
+            # ディーラー17以上
+            # ディーラー17以上
+      if 16<totaldea<22:
+          print("ディーラー：準備は整いました。勝負です。")
+          print("ディーラー：現在の私の合計は、",totaldea,"です。")
+          if total1>21:
+            # プレイヤーオーバー
+            print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
+
+          elif 22>totaldea>total1:
+            # ディーラープレイヤー全員に勝つ
+            print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")
+
+          elif 22>total1==totaldea:
+            # 引き分け
+            print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")
+
+          elif 22>total1>totaldea:
+            # プレーヤー１勝ち
+            print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")
+          
+
+
+      # ディーラー17に達していないため新しく引く
+      if totaldea<17:
+        dea3=random.sample(num, k=1)
+        deapat3=random.sample(patt, k=1)
+        print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat3,"の",dea3,"です。")
+        totaldea2=(sum(dea+dea2+dea3))
+        print("ディーラー：現在の私の合計は、",totaldea2,"です。")
+        # ディーラーオーバー
+        if totaldea2>21:
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは",name,"さんの勝ちです。")
+        elif total1>21:
+            # ディーラー　プレイヤー１オーバー
+            print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")
+          
+
+        if 16<totaldea2<22:
+          # ディーラー17以上21以下
+          if 16<totaldea2<22:
+            print("ディーラー：準備は整いました。勝負です。")
+            print("ディーラー：現在の私の合計は、",totaldea2,"です。")
+            if total1>21:
+            # プレイヤーオーバー
+              print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
+
+            elif 22>totaldea2>total1:
+              # ディーラープレイヤー全員に勝つ
+              print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")
+
+            elif 22>total1==totaldea2:
+              # 引き分け
+              print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")
+
+            elif 22>total1>totaldea2:
+              # プレーヤー１勝ち
+              print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")
+          num2 = ( 8, 9, 10, 10, 10)
+      # ディーラー新しく引く
+        if totaldea2<17:
+          dea4=random.sample(num2, k=1)
+          deapat4=random.sample(patt, k=1)
+          print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat4,"の",dea4,"です。")
+          totaldea3=(sum(dea+dea2+dea3+dea4))
+          print("ディーラー：現在の私の合計は、",totaldea3,"です。")
+
+          if totaldea3>21:
+          # ディーラーオーバー
+            if totaldea3>21:
+              print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは",name,"さんの勝ちです。")
+            elif total1>21:
+                # ディーラー　プレイヤー１オーバー
+                print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")
+              
+
+          if 16<totaldea3<22:
+            # ディーラー17以上21以下
+            if 16<totaldea3<22:
+              print("ディーラー：準備は整いました。勝負です。")
+              print("ディーラー：現在の私の合計は、",totaldea3,"です。")
+              if total1>21:
+              # プレイヤーオーバー
+                print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
+
+              elif 22>totaldea3>total1:
+                # ディーラープレイヤー全員に勝つ
+                print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")
+
+              elif 22>total1==totaldea3:
+                # 引き分け
+                print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")
+
+              elif 22>total1>totaldea3:
+                # プレーヤー１勝ち
+                print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")
