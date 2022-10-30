@@ -12,9 +12,9 @@
   <li style="background-color:#EEF;">print("ようこそ、ブラックジャックへ。")</li>
   <li style="background-color:#EFF;">print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")</li>
   <li style="background-color:#EEF;">print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")</li>
-  <li style="background-color:#EFF;">people=int(input("プレイ人数は？（1〜4名・数字のみ入力）"))</li>
+  <li style="background-color:#EFF;">people=int(input("プレイ人数は？（1〜3名・数字のみ入力）"))</li>
   <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">if 1&lt;people&lt;5:</li>
+  <li style="background-color:#EFF;">if 1&lt;people&lt;4:</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;# プレイ人数が2名の場合</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;if 1&lt;people&lt;3:</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;name1=input("プレイヤー1さん、名前を入力してください:")</li>
@@ -31,13 +31,13 @@
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの数字が、「２〜１０」までは、数字のままカウントします。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの数字が、「J・Q・K」の場合、すべて「10」としてカウントします。")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの数字が、「A」の場合、「1」としてカウントします。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの絵柄はそれぞれ、「?ハート」「?クローバー」「?スペード」「?ダイヤ」です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの絵柄はそれぞれ、「ハート」「クローバー」「スペード」「ダイヤ」です。")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("大まかな流れは以上になります。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;# カード配る</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;import random</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;num = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10)</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;patt=("?","?","?","?")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;patt=("ハート","クローバー","スペード","ダイヤ")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー:はじめに、私のカードを2枚引き、そのうち１枚をお見せします。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;deapat=random.sample(patt, k=1)</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;dea=random.sample(num, k=1)</li>
@@ -616,31 +616,1121 @@
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;</li>
   <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;# プレイ人数が3名の場合</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;# プレイ人数が3名の場合ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;if 2&lt;people&lt;4:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;name3=input("プレイヤー1さん、名前を入力してください")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;name4=input("プレイヤー2さん、名前を入力してください")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;name5=input("プレイヤー3さん、名前を入力してください")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name3,"さん",name4,"さん",name5,"さんですね。申し訳ございません。まだ3名・4名では遊べません。") </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;name1=input("プレイヤー1さん、名前を入力してください")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;name2=input("プレイヤー2さん、名前を入力してください")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;name3=input("プレイヤー3さん、名前を入力してください")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name1,"さん",name2,"さん",name3,"さんですね。それではゲームをははじめるとしましょう。") </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;# ルール説明</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("はじめに、ルール説明です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ブラックジャックは、ディーラーとプレイヤー、配られたカードの数字の合計が「２１」により近い人が勝ち、というゲームです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("最初に、ディーラーがプレイヤー側・ディーラー側にそれぞれカードを2枚ずつ配ります。この時、ディーラー側のカードは1枚が伏せられた状態になります。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("プレイヤーの皆様は、合計数が21になるまで何回でもカードを引くことができますが、21をオーバーした瞬間負けになってしまいます。また、合計数が同じだった場合は引き分けとなります。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("プレイヤーの皆様がカードを引くフェーズが終了したら、ディーラーは自分のカードの合計数が「１７」を超えるまで引き続けます。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラーよりプレイヤーの方が合計数が高い、もしくは、ディーラーが21をオーバーしたら、プレイヤーの皆様の勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの数字が、「２〜１０」までは、数字のままカウントします。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの数字が、「J・Q・K」の場合、すべて「10」としてカウントします。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの数字が、「A」の場合、「1」としてカウントします。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("カードの絵柄はそれぞれ、「ハート」「クローバー」「スペード」「ダイヤ」です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("大まかな流れは以上になります。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;# カード配る</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;import random</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;num = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;patt=("ハート","クローバー","スペード","ダイヤ")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー:はじめに、私のカードを2枚引き、そのうち１枚をお見せします。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;deapat=random.sample(patt, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;dea=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(deapat)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(dea)</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;"># ---プレーヤー1セットここから---</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、カードを2枚お配りします。",name2,"さん、",name3,"さんは、画面を見ないでください")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;choices=input("　　　　　　準備はよろしいですか？ yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=random.sample(num, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(a)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("と、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b=random.sample(num, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(b)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？ yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b+c))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
   <li style="background-color:#EFF;"></li>
   <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;"># プレイ人数が4名の場合</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;if 3&lt;people&lt;5:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;name6=input("プレイヤー1さん、名前を入力してください")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;name7=input("プレイヤー2さん、名前を入力してください")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;name8=input("プレイヤー3さん、名前を入力してください")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;name9=input("プレイヤー4さん、名前を入力してください")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name6,"さん",name7,"さん",name8,"さん",name9,"さんですね。申し訳ございません。まだ3名・4名では遊べません。") </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？ yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(d)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b+c+d))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？オーバーした場合は[no]を押してください yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(e)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b+c+d+e))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？オーバーした場合は[no]を押してください yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b+c))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ---ここまで---</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if zzz in  ['a'] or choices in ['n','no']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;"># pythonブチギレver.</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif choices in ['n', 'no', ]:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("python:はよ準備せんかい")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cho=input("　　　準備ええか？ yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if cho in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(a)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("と、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(b)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("だ。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点だよ。はぁ、、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("python：カード引く？どっちにすんの？ yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b+c))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点だ。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:    </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("python：あっ、、21超えたよww残念だったねｗ")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次行こう！！！！早くa押して"))</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("python：カード引く？どっちにすんの？あ、これコーディングしたやつバカだからオーバーしてもこの文出るときあんだ。そんときは[no]押せよ〜 yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(d)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total1=(sum(a+b+c+d))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点だ。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("python：あっ、、21超えたよww残念だったねｗ")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("python：カード引く？どっちにすんの？あ、これコーディングしたやつバカだからオーバーしてもこの文出るときあんだ。そんときは[no]押せよ〜 yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;otal=(sum(a+b+c+d+e))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:    </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("python：あっ、、21超えたよww残念だったねｗ")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.exit("python:お前となんかやってられっか！！！！強制終了します。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
   <li style="background-color:#EEF;"></li>
   <li style="background-color:#EFF;"></li>
   <li style="background-color:#EEF;"></li>
   <li style="background-color:#EFF;"></li>
   <li style="background-color:#EEF;"></li>
   <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、カードを2枚お配りします。",name1,"さん",name3,"さんは、画面を見ないでください")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;choices=input("　　　　　　準備はよろしいですか？ yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(a)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("と、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(b)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total2=(sum(a+b))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total2,"点です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？ yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total2=(sum(a+b+c))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total2,"点です。")</li>
   <li style="background-color:#EEF;"></li>
   <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total2&gt;21:    </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？ yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(d)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total2=(sum(a+b+c+d))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total2,"点です。")</li>
   <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;"># プレイ人数が1名の場合</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total2&gt;21:    </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？オーバーした場合は[no]を押してください yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(e)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total2=(sum(a+b+c+d+e))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total2,"点です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total2&gt;21:    </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？オーバーした場合は[no]を押してください yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total2=(sum(a+b+c))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total2,"点です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ---ここまで---</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if zz in  ['a'] or choices in ['n','no']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、カードを2枚お配りします。",name1,"さん、",name2,"さんは、画面を見ないでください")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;choices=input("　　　　　　準備はよろしいですか？ yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=random.sample(num, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(a)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("と、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b=random.sample(num, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(b)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total3=(sum(a+b))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total3,"点です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？ yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total3=(sum(a+b+c))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total3,"点です。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total3&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？ yes/no:")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d=random.sample(num, k=1) </li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(d)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total3=(sum(a+b+c+d))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total3,"点です。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total3&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？オーバーした場合は[no]を押してください yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(e)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total3=(sum(a+b+c+d+e))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total3,"点です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total3&gt;21:    </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：21を超えてしまいました。残念ながら負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;choices=input("ディーラー：カードを追加しますか？オーバーした場合は[no]を押してください yes/no:")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# カードを追加する</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if choices in ['y', 'ye', 'yes']:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(random.choices(patt, k=1))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c=random.sample(num, k=1) </li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(c)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total3=(sum(a+b+c))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("合計は、")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total3,"点です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ---ここまで---</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(".")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、勝負の時間です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("準備はよろしいですか？yを押してください"))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;dea2=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;deapat2=random.sample(patt, k=1)</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：私が最初に引いたカードは、",deapat,"の",dea,"です。そして、もう１枚のカードは",deapat2,"の",dea2,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;totaldea=(sum(dea+dea2))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea&lt;22:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21 and total2&gt;21 and total3&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー全員オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea&gt;total1 and 22&gt;totaldea&gt;total2 and 22&gt;totaldea&gt;total3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、",name3,"さんの点数は",total3,"点、よって今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&gt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&gt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&gt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&gt;totaldea and total3&lt;22 and total3&gt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&gt;totaldea and total3&lt;22 and total3&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&gt;totaldea and total1&lt;22 and total1&gt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&lt;totaldea and total3&lt;22 and total3&lt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&lt;totaldea and total3&lt;22 and total3&lt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&lt;totaldea and total1&lt;22 and total1&lt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２負け且つプレイヤー３オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&lt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２オーバー且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&lt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&lt;totaldea:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea and 22&gt;total2==totaldea and 22&gt;total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea&lt;22 and total2&lt;totaldea&lt;22 and total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２負け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは負け、",name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea&lt;22 and total3&lt;totaldea&lt;22 and total2==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは負け、",name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea&lt;22 and total2&lt;totaldea&lt;22 and total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは負け、",name1,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea&lt;22 and total2==totaldea and total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは負け、",name2,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&lt;totaldea&lt;22 and total1==totaldea and total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは負け、",name1,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea&lt;22 and total2==totaldea and total1==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは負け、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea and 22&gt;total2&gt;totaldea and total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea and 22&gt;total3&gt;totaldea and total2==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea and 22&gt;total2&gt;totaldea and total1==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea and total2==totaldea and total1==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total2&gt;totaldea and total3==totaldea and total1==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea and total2==totaldea and total3==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea and total2==totaldea and total1==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea&lt;22 and 22&gt;total2&gt;totaldea and 22&gt;total3&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&lt;totaldea&lt;22 and 22&gt;total1&gt;totaldea and 22&gt;total3&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea&lt;22 and 22&gt;total1&gt;totaldea and 22&gt;total2&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea&lt;22 and total2&lt;totaldea&lt;22 and 22&gt;total1&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea&lt;22 and total1&lt;totaldea&lt;22 and 22&gt;total2&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea&lt;22 and total2&lt;totaldea&lt;22 and 22&gt;total1&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea and 22&gt;total2&gt;totaldea and 22&gt;total3&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17に達していないため新しく引く</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if totaldea&lt;17:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dea3=random.sample(num, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deapat3=random.sample(patt, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat3,"の",dea3,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totaldea2=(sum(dea+dea2+dea3))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea2,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラーオーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21 and total2&gt;21 and total3&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー全員オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&gt;totaldea2 and total3&lt;22 and total3&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&gt;totaldea2 and total3&lt;22 and total3&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&gt;totaldea2 and total1&lt;22 and total1&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。おめでとうございます。今回のゲームは、",name1,"さん",name2,"さん",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上21以下</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea2,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21 and total2&gt;21 and total3&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー全員オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea2&gt;total1 and 22&gt;totaldea2&gt;total2 and 22&gt;totaldea2&gt;total3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、",name3,"さんの点数は",total3,"点、よって今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&gt;totaldea2 and total3&lt;22 and total3&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&gt;totaldea2 and total3&lt;22 and total3&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&gt;totaldea2 and total1&lt;22 and total1&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&lt;totaldea2 and total3&lt;22 and total3&lt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&lt;totaldea2 and total3&lt;22 and total3&lt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&lt;totaldea2 and total1&lt;22 and total1&lt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２負け且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&lt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２オーバー且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&lt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&lt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea2 and 22&gt;total2==totaldea2 and 22&gt;total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea2&lt;22 and total2&lt;totaldea2&lt;22 and total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２負け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは負け、",name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea2&lt;22 and total3&lt;totaldea2&lt;22 and total2==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは負け、",name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea2&lt;22 and total2&lt;totaldea2&lt;22 and total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは負け、",name1,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea2&lt;22 and total2==totaldea2 and total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは負け、",name2,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&lt;totaldea2&lt;22 and total1==totaldea2 and total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは負け、",name1,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea2&lt;22 and total2==totaldea2 and total1==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは負け、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2 and 22&gt;total2&gt;totaldea2 and total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2 and 22&gt;total3&gt;totaldea2 and total2==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea2 and 22&gt;total2&gt;totaldea2 and total1==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea2 and total2==totaldea2 and total1==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total2&gt;totaldea2 and total3==totaldea2 and total1==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2 and total2==totaldea2 and total3==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea2 and total2==totaldea2 and total1==totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea2&lt;22 and 22&gt;total2&gt;totaldea2 and 22&gt;total3&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&lt;totaldea2&lt;22 and 22&gt;total1&gt;totaldea2 and 22&gt;total3&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea2&lt;22 and 22&gt;total1&gt;totaldea2 and 22&gt;total2&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea2&lt;22 and total2&lt;totaldea2&lt;22 and 22&gt;total1&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea2&lt;22 and total1&lt;totaldea2&lt;22 and 22&gt;total2&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea2&lt;22 and total2&lt;totaldea2&lt;22 and 22&gt;total1&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name3,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2 and 22&gt;total2&gt;totaldea2 and 22&gt;total3&gt;totaldea2:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num2 = ( 8, 9, 10, 10, 10)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&lt;17:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dea4=random.sample(num2, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deapat4=random.sample(patt, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat4,"の",dea4,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totaldea3=(sum(dea+dea2+dea3+dea4))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea3,"です。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラーオーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea3&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21 and total2&gt;21 and total3&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー全員オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&gt;totaldea3 and total3&lt;22 and total3&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&gt;totaldea3 and total3&lt;22 and total3&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&gt;totaldea3 and total1&lt;22 and total1&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。おめでとうございます。今回のゲームは、",name1,"さん",name2,"さん",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea3&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上21以下</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea3,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21 and total2&gt;21 and total3&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー全員オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea3&gt;total1 and 22&gt;totaldea3&gt;total2 and 22&gt;totaldea3&gt;total3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、",name3,"さんの点数は",total3,"点、よって今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&gt;totaldea3 and total3&lt;22 and total3&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&gt;totaldea3 and total3&lt;22 and total3&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&gt;totaldea3 and total1&lt;22 and total1&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&lt;22 and total2&lt;totaldea3 and total3&lt;22 and total3&lt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total1&lt;22 and total1&lt;totaldea3 and total3&lt;22 and total3&lt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&gt;21 and total2&lt;22 and total2&lt;totaldea3 and total1&lt;22 and total1&lt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２負け且つプレイヤー３オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total2&gt;21 and total3&lt;22 and total3&lt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２オーバー且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21 and total3&gt;21 and total2&lt;22 and total2&lt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&gt;21 and total3&gt;21 and total1&lt;22 and total1&lt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea3 and 22&gt;total2==totaldea3 and 22&gt;total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea3&lt;22 and total2&lt;totaldea3&lt;22 and total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２負け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは負け、",name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea3&lt;22 and total3&lt;totaldea3&lt;22 and total2==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは負け、",name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea3&lt;22 and total2&lt;totaldea3&lt;22 and total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは負け、",name1,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea3&lt;22 and total2==totaldea3 and total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは負け、",name2,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&lt;totaldea3&lt;22 and total1==totaldea3 and total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは負け、",name1,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea3&lt;22 and total2==totaldea3 and total1==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは負け、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea3 and 22&gt;total2&gt;totaldea3 and total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea3 and 22&gt;total3&gt;totaldea3 and total2==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea3 and 22&gt;total2&gt;totaldea3 and total1==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea3 and total2==totaldea3 and total1==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total2&gt;totaldea3 and total3==totaldea3 and total1==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea3 and total2==totaldea3 and total3==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea3 and total2==totaldea3 and total1==totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&lt;totaldea3&lt;22 and 22&gt;total2&gt;totaldea3 and 22&gt;total3&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total2&lt;totaldea3&lt;22 and 22&gt;total1&gt;totaldea3 and 22&gt;total3&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea3&lt;22 and 22&gt;total1&gt;totaldea3 and 22&gt;total2&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea3&lt;22 and total2&lt;totaldea3&lt;22 and 22&gt;total1&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea3&lt;22 and total1&lt;totaldea3&lt;22 and 22&gt;total2&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total3&lt;totaldea3&lt;22 and total2&lt;totaldea3&lt;22 and 22&gt;total1&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name3,"さんは負けです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea3 and 22&gt;total2&gt;totaldea3 and 22&gt;total3&gt;totaldea3:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;"># プレイ人数が1名の場合ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</li>
   <li style="background-color:#EEF;">else:</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;name=input("名前を入力してください")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;print(name,"さんですね。それではゲームをはじめるとしましょう。") </li>
@@ -655,13 +1745,13 @@
   <li style="background-color:#EFF;">&nbsp;&nbsp;print("カードの数字が、「２〜１０」までは、数字のままカウントします。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;print("カードの数字が、「J・Q・K」の場合、すべて「10」としてカウントします。")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;print("カードの数字が、「A」の場合、「1」としてカウントします。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;print("カードの絵柄はそれぞれ、「?ハート」「?クローバー」「?スペード」「?ダイヤ」です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;print("カードの絵柄はそれぞれ、「ハート」「クローバー」「スペード」「ダイヤ」です。")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;print("大まかな流れは以上になります。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;# カード配る</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;import random</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;num = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10)</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;patt=("?","?,","?","?")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;patt=("ハート","クローバー,","スペード","ダイヤ")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;print("ディーラー:はじめに、私のカードを2枚引き、そのうち１枚をお見せします。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;deapat=random.sample(patt, k=1)</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;dea=random.sample(num, k=1)</li>
