@@ -1505,6 +1505,24 @@
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2 and 22&gt;total2&gt;totaldea2 and 22&gt;total3&gt;totaldea2:</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２勝ち</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2 and total2==totaldea2 and total3&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,"さんは引き分け、",name3,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total2&gt;totaldea2 and total1==totaldea2 and total3&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３負け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,"さんは引き分け、",name3,"さんは負けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total3&gt;totaldea2 and total1==totaldea2 and total2&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,"さんは引き分け、",name2,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total2&gt;totaldea2 and total3==totaldea2 and total1&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name3,"さんは引き分け、",name1,"さんは負けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num2 = ( 8, 9, 10, 10, 10)</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&lt;17:</li>

@@ -1503,6 +1503,24 @@ if 1<people<4:
         elif 22>total1>totaldea2 and 22>total2>totaldea2 and 22>total3>totaldea2:
           # プレーヤー１勝ち且つプレイヤー２勝ち
           print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")
+
+        elif 22>total1>totaldea2 and total2==totaldea2 and total3<totaldea2<22:
+          # プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,"さんは引き分け、",name3,"さんは負けです。")
+
+        elif 22>total2>totaldea2 and total1==totaldea2 and total3<totaldea2<22:
+          # プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,"さんは引き分け、",name3,"さんは負けです。")
+          
+        elif 22>total3>totaldea2 and total1==totaldea2 and total2<totaldea2<22:
+          # プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,"さんは引き分け、",name2,"さんは負けです。")
+
+        elif 22>total2>totaldea2 and total3==totaldea2 and total1<totaldea2<22:
+          # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name3,"さんは引き分け、",name1,"さんは負けです。")
+
+        
   
       num2 = ( 8, 9, 10, 10, 10)
       if totaldea2<17:
