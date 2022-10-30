@@ -10,9 +10,9 @@ print("-------------------------------------------------------------------------
 print("ようこそ、ブラックジャックへ。")
 print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
 print("--------------------------------------------------------------------------------------------------------------------------------------------------------------------")
-people=int(input("プレイ人数は？（1～4名・数字のみ入力）"))
+people=int(input("プレイ人数は？（1～3名・数字のみ入力）"))
 
-if 1<people<5:
+if 1<people<4:
   # プレイ人数が2名の場合
   if 1<people<3:
     name1=input("プレイヤー1さん、名前を入力してください:")
@@ -1243,29 +1243,46 @@ if 1<people<5:
           # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち
           print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")
 
+        elif 22>total2>totaldea and total3==totaldea and total1==totaldea:
+          # プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは引き分けです。")
 
+        elif 22>total1>totaldea and total2==totaldea and total3==totaldea:
+          # プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは引き分けです。")
 
+        elif 22>total3>totaldea and total2==totaldea and total1==totaldea:
+          # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")
 
+        elif total1<totaldea<22 and 22>total2>totaldea and 22>total3>totaldea:
+          # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは負けです。")
 
+        elif total2<totaldea<22 and 22>total1>totaldea and 22>total3>totaldea:
+        # プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは負けです。")
 
-          # ここか
+        elif total3<totaldea<22 and 22>total1>totaldea and 22>total2>totaldea:
+        # プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは負けです。")
 
-        
-        
+        elif total3<totaldea<22 and total2<totaldea<22 and 22>total1>totaldea:
+        # プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは負けです。")
 
-        elif total1<totaldea<22 and 22>total2>totaldea:
-          # プレーヤー１ディーラーより少ない且つプレイヤー２勝ち
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、おめでとうございます、",name2,"さんは勝ちです。")
+        elif total3<totaldea<22 and total1<totaldea<22 and 22>total2>totaldea:
+        # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは負けです。")
 
-        elif total2<totaldea<22 and 22>total1>totaldea:
-          # プレーヤー２ディーラーより少ない且つプレイヤー１勝ち
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、おめでとうございます、",name2,"さんは勝ちです。")
+        elif total3<totaldea<22 and total2<totaldea<22 and 22>total1>totaldea:
+        # プレーヤー１負け且つプレイヤー２負け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name3,"さんは負けです。")
 
-        elif 22>total2>totaldea and 22>total1>totaldea:
+        elif 22>total1>totaldea and 22>total2>totaldea and 22>total3>totaldea:
           # プレーヤー１勝ち且つプレイヤー２勝ち
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
-        
-
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")
+  
 
     # ディーラー17に達していないため新しく引く
     if totaldea<17:
@@ -1277,74 +1294,216 @@ if 1<people<5:
       # ディーラーオーバー
       if totaldea2>21:
         # プレイヤー１オーバー
-        if total1>21:
-          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name1,"さんもオーバーしている為、今回のゲームは",name2,"さんの勝ちです。")
-        elif total2>21:
-          # プレイヤー２オーバー
-          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name2,"さんもオーバーしている為、今回のゲームは",name1,"さんの勝ちです。")
-        elif total1>21 and total2>21:
-          # ディーラー　プレイヤー１　プレイヤー２オーバー
-          print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")
+        if total1>21 and total2>21 and total3>21:
+          # プレイヤー全員オーバー
+          print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは引き分けです。")
+
+        elif total1>21 and total2>21 and total3<22 and total3>totaldea2:
+          # プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+        elif total1>21 and total3>21 and total2<22 and total2>totaldea2:
+          # プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")
+
+        elif total2>21 and total3>21 and total1<22 and total1>totaldea2:
+          # プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+        elif total1>21 and total2<22 and total2>totaldea2 and total3<22 and total3>totaldea2:
+          # プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")
+
+        elif total2>21 and total1<22 and total1>totaldea2 and total3<22 and total3>totaldea2:
+          # プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")
+
+        elif total3>21 and total2<22 and total2>totaldea2 and total1<22 and total1>totaldea2:
+          # プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー
+          print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")
+
         else:
-          print("ディーラー：おっと、21を超えてしまいましたね。おめでとうございます。今回のゲームは、",name1,"さん、",name2,"さんの勝ちです。")
+          print("ディーラー：おっと、21を超えてしまいましたね。おめでとうございます。今回のゲームは、",name1,"さん",name2,"さん",name3,"さんの勝ちです。")
         
 
       if 16<totaldea2<22:
         # ディーラー17以上21以下
         print("ディーラー：準備は整いました。勝負です。")
         print("ディーラー：現在の私の合計は、",totaldea2,"です。")
-        if total1>21 and total2>21:
+        if total1>21 and total2>21 and total3>21:
           # プレイヤー全員オーバー
-          print("ディーラー：",name1,"さん、",name2,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
-        
-        elif 22>totaldea2>total1 and 22>totaldea2>total2:
+          print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
+
+        elif 22>totaldea2>total1 and 22>totaldea2>total2 and 22>totaldea2>total3:
           # ディーラープレイヤー全員に勝つ
-          print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、よって今回のゲームは私の勝ちです。")
+          print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、",name3,"さんの点数は",total3,"点、よって今回のゲームは私の勝ちです。")
         
-        elif total1>21 and total2<22 and total2>totaldea2:
-          # プレイヤー１オーバー且つプレイヤー２ディーラーに勝つ
+        elif total1>21 and total2>21 and total3<22 and total3>totaldea2:
+          # プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち
           print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+        elif total1>21 and total3>21 and total2<22 and total2>totaldea2:
+          # プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
           print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")
-        
-        elif total1<22 and total2>21 and total1>totaldea2:
-          # プレイヤー２オーバー且つプレイヤー１ディーラーに勝つ
-          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
-          print("ディーラー：",name1,"さんの合計は、",total1,"です。おめでとうございます。今回のゲームは",name1,"さんの勝ちです。")
 
-        elif total1>21 and total2<22 and total2<totaldea2:
-          # プレイヤー１オーバー且つプレイヤー２ディーラーに負け
+        elif total2>21 and total3>21 and total1<22 and total1>totaldea2:
+          # プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー
           print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
-          print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
-        
-        elif total2>21 and total2<22 and total2<totaldea2:
-          # プレイヤー２オーバー且つプレイヤー１ディーラーに負け
           print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+        elif total1>21 and total2<22 and total2>totaldea2 and total3<22 and total3>totaldea2:
+          # プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")
+
+        elif total2>21 and total1<22 and total1>totaldea2 and total3<22 and total3>totaldea2:
+          # プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")
+
+        elif total3>21 and total2<22 and total2>totaldea2 and total1<22 and total1>totaldea2:
+          # プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")
+
+        elif total1>21 and total2<22 and total2<totaldea2 and total3<22 and total3<totaldea2:
+          # プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３負け
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")
+
+        elif total2>21 and total1<22 and total1<totaldea2 and total3<22 and total3<totaldea2:
+          # プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３負け
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")
+
+        elif total3>21 and total2<22 and total2<totaldea2 and total1<22 and total1<totaldea2:
+          # プレイヤー１負け且つプレイヤー２負け且つプレイヤー３オーバー
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
+
+        elif total1>21 and total2>21 and total3<22 and total3<totaldea2:
+          # プレイヤー１オーバー且つプレイヤー２オーバー且つプレイヤー３負け
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")
+
+        elif total1>21 and total3>21 and total2<22 and total2<totaldea2:
+          # プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３オーバー
+          print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
+
+        elif total2>21 and total3>21 and total1<22 and total1<totaldea2:
+          # プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３オーバー
+          print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+          print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
           print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")
+        
 
-        elif 22>total1==totaldea2 and 22>total2==totaldea2:
+        elif 22>total1==totaldea2 and 22>total2==totaldea2 and 22>total3==totaldea2:
           # 引き分け
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。今回のゲームは引き分けです。")
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。今回のゲームは引き分けです。")
 
-        elif total1<totaldea2<22 and total2==totaldea2:
-          # プレーヤー１ディーラーより少ない且つプレイヤー２ディーラー引き分け
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、",name2,"さんは引き分けです。")
+        elif total1<totaldea2<22 and total2<totaldea2<22 and total3==totaldea2:
+          # プレーヤー１負け且つプレイヤー２負け且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは負け、",name3,"さんは引き分けです。")
 
-        elif total2<totaldea2<22 and total1==totaldea2:
-          # プレーヤー２ディーラーより少ない且つプレイヤー１ディーラー引き分け
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name2,"さんは負け、",name1,"さんは引き分けです。")
+        elif total1<totaldea2<22 and total3<totaldea2<22 and total2==totaldea2:
+        # プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは負け、",name2,"さんは引き分けです。")
 
-        elif total1<totaldea2<22 and 22>total2>totaldea2:
-          # プレーヤー１ディーラーより少ない且つプレイヤー２勝ち
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、おめでとうございます、",name2,"さんは勝ちです。")
+        elif total1<totaldea2<22 and total2<totaldea2<22 and total3==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは負け、",name1,"さんは引き分けです。")
 
-        elif total2<totaldea2<22 and 22>total1>totaldea2:
-          # プレーヤー２ディーラーより少ない且つプレイヤー１勝ち
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、おめでとうございます、",name2,"さんは勝ちです。")
+        elif total1<totaldea2<22 and total2==totaldea2 and total3==totaldea2:
+          # プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは負け、",name2,name3,"さんは引き分けです。")
 
-        elif 22>total2>totaldea2 and 22>total1>totaldea2:
+        elif total2<totaldea2<22 and total1==totaldea2 and total3==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは負け、",name1,name3,"さんは引き分けです。")
+
+        elif total3<totaldea2<22 and total2==totaldea2 and total1==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは負け、",name1,name2,"さんは引き分けです。")
+
+        elif 22>total1>totaldea2 and 22>total2>totaldea2 and total3==totaldea2:
+          # プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは引き分けです。")
+
+        elif 22>total1>totaldea2 and 22>total3>totaldea2 and total2==totaldea2:
+          # プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは引き分けです。")
+
+        elif 22>total3>totaldea2 and 22>total2>totaldea2 and total1==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは引き分けです。")
+
+        elif 22>total3>totaldea2 and total2==totaldea2 and total1==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")
+
+        elif 22>total2>totaldea2 and total3==totaldea2 and total1==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは引き分けです。")
+
+        elif 22>total1>totaldea2 and total2==totaldea2 and total3==totaldea2:
+          # プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３引き分け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは引き分けです。")
+
+        elif 22>total3>totaldea2 and total2==totaldea2 and total1==totaldea2:
+          # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")
+
+        elif total1<totaldea2<22 and 22>total2>totaldea2 and 22>total3>totaldea2:
+          # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは負けです。")
+
+        elif total2<totaldea2<22 and 22>total1>totaldea2 and 22>total3>totaldea2:
+        # プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは負けです。")
+
+        elif total3<totaldea2<22 and 22>total1>totaldea2 and 22>total2>totaldea2:
+        # プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは負けです。")
+
+        elif total3<totaldea2<22 and total2<totaldea2<22 and 22>total1>totaldea2:
+        # プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは負けです。")
+
+        elif total3<totaldea2<22 and total1<totaldea2<22 and 22>total2>totaldea2:
+        # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３負け
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは負けです。")
+
+        elif total3<totaldea2<22 and total2<totaldea2<22 and 22>total1>totaldea2:
+        # プレーヤー１負け且つプレイヤー２負け且つプレイヤー３勝ち
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name3,"さんは負けです。")
+
+        elif 22>total1>totaldea2 and 22>total2>totaldea2 and 22>total3>totaldea2:
           # プレーヤー１勝ち且つプレイヤー２勝ち
-          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
-
+          print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")
+  
       num2 = ( 8, 9, 10, 10, 10)
       if totaldea2<17:
         dea4=random.sample(num2, k=1)
@@ -1353,115 +1512,220 @@ if 1<people<5:
         totaldea3=(sum(dea+dea2+dea3+dea4))
         print("ディーラー：現在の私の合計は、",totaldea3,"です。")
 
+         # ディーラーオーバー
         if totaldea3>21:
-        # プレイヤー１オーバー
-          if total1>21:
-            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name1,"さんもオーバーしている為、今回のゲームは",name2,"さんの勝ちです。")
-          elif total2>21:
-            # プレイヤー２オーバー
-            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name2,"さんもオーバーしている為、今回のゲームは",name1,"さんの勝ちです。")
-          elif total1>21 and total2>21:
-            # ディーラー　プレイヤー１　プレイヤー２オーバー
-            print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")
+          # プレイヤー１オーバー
+          if total1>21 and total2>21 and total3>21:
+            # プレイヤー全員オーバー
+            print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは引き分けです。")
+
+          elif total1>21 and total2>21 and total3<22 and total3>totaldea3:
+            # プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち
+            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+          elif total1>21 and total3>21 and total2<22 and total2>totaldea3:
+            # プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー
+            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")
+
+          elif total2>21 and total3>21 and total1<22 and total1>totaldea3:
+            # プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー
+            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+          elif total1>21 and total2<22 and total2>totaldea3 and total3<22 and total3>totaldea3:
+            # プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち
+            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")
+
+          elif total2>21 and total1<22 and total1>totaldea3 and total3<22 and total3>totaldea3:
+            # プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち
+            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")
+
+          elif total3>21 and total2<22 and total2>totaldea3 and total1<22 and total1>totaldea3:
+            # プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー
+            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。")
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")
+
           else:
-            print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは、",name1,"さん、",name2,"さんの勝ちです。")
+            print("ディーラー：おっと、21を超えてしまいましたね。おめでとうございます。今回のゲームは、",name1,"さん",name2,"さん",name3,"さんの勝ちです。")
+          
 
         if 16<totaldea3<22:
+          # ディーラー17以上21以下
           print("ディーラー：準備は整いました。勝負です。")
           print("ディーラー：現在の私の合計は、",totaldea3,"です。")
-          if total1>21 and total2>21:
+          if total1>21 and total2>21 and total3>21:
             # プレイヤー全員オーバー
-            print("ディーラー：",name1,"さん、",name2,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
+            print("ディーラー：",name1,"さん、",name2,"さん、",name3,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")
 
-          elif 22>totaldea3>total1 and 22>totaldea3>total2:
-          # ディーラープレイヤー全員に勝つ
-            print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、よって今回のゲームは私の勝ちです。")
+          elif 22>totaldea3>total1 and 22>totaldea3>total2 and 22>totaldea3>total3:
+            # ディーラープレイヤー全員に勝つ
+            print("ディーラー：",name1,"さんの点数は",total1,"点、",name2,"さんの点数は",total2,"点、",name3,"さんの点数は",total3,"点、よって今回のゲームは私の勝ちです。")
           
-          elif total1>21 and total2<22 and total2>totaldea3:
-            # プレイヤー１オーバー且つプレイヤー２ディーラーに勝つ
+          elif total1>21 and total2>21 and total3<22 and total3>totaldea3:
+            # プレイヤー１オーバー且つプレイヤー2オーバー且つプレイヤー3勝ち
             print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+          elif total1>21 and total3>21 and total2<22 and total2>totaldea3:
+            # プレイヤー１オーバー且つプレイヤー2勝ち且つプレイヤー3オーバー
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
             print("ディーラー：",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name2,"さんの勝ちです。")
-          
-          elif total1<22 and total2>21 and total1>totaldea3:
-            # プレイヤー２オーバー且つプレイヤー１ディーラーに勝つ
-            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
-            print("ディーラー：",name1,"さんの合計は、",total1,"です。おめでとうございます。今回のゲームは",name1,"さんの勝ちです。")
 
-          elif total1>21 and total2<22 and total2<totaldea3:
-          # プレイヤー１オーバー且つプレイヤー２ディーラーに負け
+          elif total2>21 and total3>21 and total1<22 and total1>totaldea3:
+            # プレイヤー１勝ち且つプレイヤー2オーバー且つプレイヤー3オーバー
             print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name3,"さんの勝ちです。")
+
+          elif total1>21 and total2<22 and total2>totaldea3 and total3<22 and total3>totaldea3:
+            # プレイヤー１オーバー且つプレイヤー２勝ち且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name2,name3,"さんの勝ちです。")
+
+          elif total2>21 and total1<22 and total1>totaldea3 and total3<22 and total3>totaldea3:
+            # プレイヤー１勝ち且つプレイヤー２オーバー且つプレイヤー３勝ち
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。おめでとうございます。今回のゲームは",name1,name3,"さんの勝ちです。")
+
+          elif total3>21 and total2<22 and total2>totaldea3 and total1<22 and total1>totaldea3:
+            # プレイヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３オーバー
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。おめでとうございます。今回のゲームは",name1,name2,"さんの勝ちです。")
+
+          elif total1>21 and total2<22 and total2<totaldea3 and total3<22 and total3<totaldea3:
+            # プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３負け
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さんの合計は、",total2,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")
+
+          elif total2>21 and total1<22 and total1<totaldea3 and total3<22 and total3<totaldea3:
+            # プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３負け
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")
+
+          elif total3>21 and total2<22 and total2<totaldea3 and total1<22 and total1<totaldea3:
+            # プレイヤー１負け且つプレイヤー２負け且つプレイヤー３オーバー
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
+
+          elif total1>21 and total2>21 and total3<22 and total3<totaldea3:
+            # プレイヤー１オーバー且つプレイヤー２オーバー且つプレイヤー３負け
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さんの合計は、",total3,"です。今回のゲームは私の勝ちです。")
+
+          elif total1>21 and total3>21 and total2<22 and total2<totaldea3:
+            # プレイヤー１オーバー且つプレイヤー２負け且つプレイヤー３オーバー
+            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
             print("ディーラー：",name2,"さんの合計は、",total2,"です。今回のゲームは私の勝ちです。")
-        
-          elif total2>21 and total2<22 and total2<totaldea3:
-          # プレイヤー２オーバー且つプレイヤー１ディーラーに負け
+
+          elif total2>21 and total3>21 and total1<22 and total1<totaldea3:
+            # プレイヤー１負け且つプレイヤー２オーバー且つプレイヤー３オーバー
             print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
+            print("ディーラー：",name3,"さん、21をオーバーしている様ですね。")
             print("ディーラー：",name1,"さんの合計は、",total1,"です。今回のゲームは私の勝ちです。")
+          
 
-          elif 22>total1==totaldea3 and 22>total2==totaldea3:
+          elif 22>total1==totaldea3 and 22>total2==totaldea3 and 22>total3==totaldea3:
             # 引き分け
-            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。今回のゲームは引き分けです。")
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。今回のゲームは引き分けです。")
 
-          elif total1<totaldea3<22 and total2==totaldea3:
-            # プレーヤー１ディーラーより少ない且つプレイヤー２ディーラー引き分け
-            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、",name2,"さんは引き分けです。")
+          elif total1<totaldea3<22 and total2<totaldea3<22 and total3==totaldea3:
+            # プレーヤー１負け且つプレイヤー２負け且つプレイヤー３引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは負け、",name3,"さんは引き分けです。")
 
-          elif total2<totaldea3<22 and total1==totaldea3:
-            # プレーヤー２ディーラーより少ない且つプレイヤー１ディーラー引き分け
-            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name2,"さんは負け、",name1,"さんは引き分けです。")
+          elif total1<totaldea3<22 and total3<totaldea3<22 and total2==totaldea3:
+          # プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３負け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは負け、",name2,"さんは引き分けです。")
 
-          elif total1>21 and total2==totaldea3:
-            # プレイヤー１オーバー且つプレイヤー２引き分け
-            print("ディーラー：",name1,"さん、21をオーバーしている様ですね。")
-            print("ディーラー：",name2,"さんの合計は、",total2,"です。",name1,"さんは負け、",name2,"さんは引き分けです。")
+          elif total1<totaldea3<22 and total2<totaldea3<22 and total3==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３負け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは負け、",name1,"さんは引き分けです。")
 
-          elif total2>21 and total1==totaldea3:
-            # プレイヤー２オーバー且つプレイヤー１引き分け
-            print("ディーラー：",name2,"さん、21をオーバーしている様ですね。")
-            print("ディーラー：",name1,"さんの合計は、",total1,"です。",name2,"さんは負け、",name1,"さんは引き分けです。")
+          elif total1<totaldea3<22 and total2==totaldea3 and total3==totaldea3:
+            # プレーヤー１負け且つプレイヤー２引き分け且つプレイヤー３引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは負け、",name2,name3,"さんは引き分けです。")
 
-          elif total1<totaldea3<22 and 22>total2>totaldea3:
-            # プレーヤー１ディーラーより少ない且つプレイヤー２勝ち
-            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、おめでとうございます、",name2,"さんは勝ちです。")
+          elif total2<totaldea3<22 and total1==totaldea3 and total3==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２負け且つプレイヤー３引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは負け、",name1,name3,"さんは引き分けです。")
 
-          elif total2<totaldea3<22 and 22>total1>totaldea3:
-            # プレーヤー２ディーラーより少ない且つプレイヤー１勝ち
-            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは負け、おめでとうございます、",name2,"さんは勝ちです。")
+          elif total3<totaldea3<22 and total2==totaldea3 and total1==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３負け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは負け、",name1,name2,"さんは引き分けです。")
 
-          elif 22>total2>totaldea3 and 22>total1>totaldea3:
+          elif 22>total1>totaldea3 and 22>total2>totaldea3 and total3==totaldea3:
+            # プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは引き分けです。")
+
+          elif 22>total1>totaldea3 and 22>total3>totaldea3 and total2==totaldea3:
+            # プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは引き分けです。")
+
+          elif 22>total3>totaldea3 and 22>total2>totaldea3 and total1==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは引き分けです。")
+
+          elif 22>total3>totaldea3 and total2==totaldea3 and total1==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")
+
+          elif 22>total2>totaldea3 and total3==totaldea3 and total1==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２勝ち且つプレイヤー３引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは引き分けです。")
+
+          elif 22>total1>totaldea3 and total2==totaldea3 and total3==totaldea3:
+            # プレーヤー１勝ち且つプレイヤー２引き分け且つプレイヤー３引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは引き分けです。")
+
+          elif 22>total3>totaldea3 and total2==totaldea3 and total1==totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２引き分け且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name2,"さんは引き分けです。")
+
+          elif total1<totaldea3<22 and 22>total2>totaldea3 and 22>total3>totaldea3:
+            # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,name3,"さんは勝ち、",name1,"さんは負けです。")
+
+          elif total2<totaldea3<22 and 22>total1>totaldea3 and 22>total3>totaldea3:
+          # プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name3,"さんは勝ち、",name2,"さんは負けです。")
+
+          elif total3<totaldea3<22 and 22>total1>totaldea3 and 22>total2>totaldea3:
+          # プレーヤー１勝ち且つプレイヤー２勝ち且つプレイヤー３負け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,name2,"さんは勝ち、",name3,"さんは負けです。")
+
+          elif total3<totaldea3<22 and total2<totaldea3<22 and 22>total1>totaldea3:
+          # プレーヤー１勝ち且つプレイヤー２負け且つプレイヤー３負け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name1,"さんは勝ち、",name2,name3,"さんは負けです。")
+
+          elif total3<totaldea3<22 and total1<totaldea3<22 and 22>total2>totaldea3:
+          # プレーヤー１負け且つプレイヤー２勝ち且つプレイヤー３負け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name2,"さんは勝ち、",name1,name3,"さんは負けです。")
+
+          elif total3<totaldea3<22 and total2<totaldea3<22 and 22>total1>totaldea3:
+          # プレーヤー１負け且つプレイヤー２負け且つプレイヤー３勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。",name3,"さんは勝ち、",name1,name3,"さんは負けです。")
+
+          elif 22>total1>totaldea3 and 22>total2>totaldea3 and 22>total3>totaldea3:
             # プレーヤー１勝ち且つプレイヤー２勝ち
-            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"で、",name3,"さんの合計は",total3,"です。おめでとうございます。",name1,"さん",name2,"さん",name3,"さんは勝ちです。")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# プレイ人数が4名の場合ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  if 3<people<5:
-    name6=input("プレイヤー1さん、名前を入力してください")
-    name7=input("プレイヤー2さん、名前を入力してください")
-    name8=input("プレイヤー3さん、名前を入力してください")
-    name9=input("プレイヤー4さん、名前を入力してください")
-    print(name6,"さん",name7,"さん",name8,"さん",name9,"さんですね。申し訳ございません。まだ4名では遊べません。") 
-
-
-
-
-
-
-
+        
 
 
 # プレイ人数が1名の場合ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
