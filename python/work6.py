@@ -1865,10 +1865,11 @@ else:
                 print(total1,"点です。")
                 zzz=(input("次へ進みます。aを押してください"))
                 # ここまで
-
+  
+    num1 = (6, 7, 8, 9, 10, 10, 10)
     print("ディーラー：",name,"さん、勝負の時間です。")
     zzz=(input("準備はよろしいですか？yを押してください"))
-    dea2=random.sample(num, k=1)
+    dea2=random.sample(num1, k=1)
     deapat2=random.sample(patt, k=1)
     print("ディーラー：私が最初に引いたカードは、",deapat,"の",dea,"です。そして、もう１枚のカードは",deapat2,"の",dea2,"です。")
     totaldea=(sum(dea+dea2))
@@ -1895,10 +1896,10 @@ else:
           print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")
         
 
-
+    num2 = ( 8, 9, 10, 10, 10)
     # ディーラー17に達していないため新しく引く
     if totaldea<17:
-      dea3=random.sample(num, k=1)
+      dea3=random.sample(num2, k=1)
       deapat3=random.sample(patt, k=1)
       print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat3,"の",dea3,"です。")
       totaldea2=(sum(dea+dea2+dea3))
@@ -1932,7 +1933,7 @@ else:
             # プレーヤー１勝ち
             print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")
 
-      num2 = ( 8, 9, 10, 10, 10)
+      
     # ディーラー新しく引く
       if totaldea2<17:
         dea4=random.sample(num2, k=1)

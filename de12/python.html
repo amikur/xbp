@@ -1867,109 +1867,110 @@
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(total1,"点です。")</li>
   <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("次へ進みます。aを押してください"))</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ここまで</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、勝負の時間です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("準備はよろしいですか？yを押してください"))</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;dea2=random.sample(num, k=1)</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;deapat2=random.sample(patt, k=1)</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：私が最初に引いたカードは、",deapat,"の",dea,"です。そして、もう１枚のカードは",deapat2,"の",dea2,"です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;totaldea=(sum(dea+dea2))</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea,"です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;num1 = (6, 7, 8, 9, 10, 10, 10)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、勝負の時間です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;zzz=(input("準備はよろしいですか？yを押してください"))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;dea2=random.sample(num1, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;deapat2=random.sample(patt, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：私が最初に引いたカードは、",deapat,"の",dea,"です。そして、もう１枚のカードは",deapat2,"の",dea2,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;totaldea=(sum(dea+dea2))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea,"です。")</li>
   <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea&lt;22:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea,"です。")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤーオーバー</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea&gt;total1:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤーオーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
   <li style="background-color:#EFF;"></li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17に達していないため新しく引く</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if totaldea&lt;17:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dea3=random.sample(num, k=1)</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deapat3=random.sample(patt, k=1)</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat3,"の",dea3,"です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totaldea2=(sum(dea+dea2+dea3))</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea2,"です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラーオーバー</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&gt;21:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは",name,"さんの勝ちです。")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー　プレイヤー１オーバー</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea&gt;total1:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")</li>
   <li style="background-color:#EFF;"></li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea2&lt;22:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上21以下</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea2&lt;22:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea2,"です。")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤーオーバー</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea2&gt;total1:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea2:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")</li>
-  <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num2 = ( 8, 9, 10, 10, 10)</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー新しく引く</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&lt;17:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dea4=random.sample(num2, k=1)</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deapat4=random.sample(patt, k=1)</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat4,"の",dea4,"です。")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totaldea3=(sum(dea+dea2+dea3+dea4))</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea3,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")</li>
   <li style="background-color:#EFF;"></li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea3&gt;21:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラーオーバー</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea3&gt;21:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは",name,"さんの勝ちです。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー　プレイヤー１オーバー</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
   <li style="background-color:#EEF;"></li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea3&lt;22:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上21以下</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea3&lt;22:</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea3,"です。")</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤーオーバー</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;num2 = ( 8, 9, 10, 10, 10)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17に達していないため新しく引く</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if totaldea&lt;17:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dea3=random.sample(num2, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deapat3=random.sample(patt, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat3,"の",dea3,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totaldea2=(sum(dea+dea2+dea3))</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea2,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラーオーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは",name,"さんの勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー　プレイヤー１オーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上21以下</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea2&lt;22:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea2,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤーオーバー</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
   <li style="background-color:#EFF;"></li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea3&gt;total1:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea2&gt;total1:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")</li>
   <li style="background-color:#EFF;"></li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea3:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")</li>
   <li style="background-color:#EFF;"></li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea3:</li>
-  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち</li>
-  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea2:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー新しく引く</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea2&lt;17:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dea4=random.sample(num2, k=1)</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deapat4=random.sample(patt, k=1)</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：合計が17点に達していない為新しくカードを引きます。",deapat4,"の",dea4,"です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totaldea3=(sum(dea+dea2+dea3+dea4))</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea3,"です。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea3&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラーオーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if totaldea3&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。今回のゲームは",name,"さんの勝ちです。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif total1&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー　プレイヤー１オーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：今回のゲームは全員21を超えてしまった為、引き分けです。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li style="background-color:#EFF;"></li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea3&lt;22:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラー17以上21以下</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 16&lt;totaldea3&lt;22:</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：準備は整いました。勝負です。")</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：現在の私の合計は、",totaldea3,"です。")</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if total1&gt;21:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレイヤーオーバー</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さん、21をオーバーしている様ですね。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;totaldea3&gt;total1:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ディーラープレイヤー全員に勝つ</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの点数は",total1,"点です。今回のゲームは私の勝ちです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1==totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 引き分け</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。今回のゲームは引き分けです。")</li>
+  <li style="background-color:#EEF;"></li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif 22&gt;total1&gt;totaldea3:</li>
+  <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# プレーヤー１勝ち</li>
+  <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("ディーラー：",name,"さんの合計は",total1,"です。おめでとうございます。",name,"さんは勝ちです。")</li>
   </ol></code>
