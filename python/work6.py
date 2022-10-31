@@ -459,9 +459,9 @@ if 1<people<4:
         # ディーラーオーバー
         if totaldea2>21:
           # プレイヤー１オーバー
-          if total1>21:
+          if total1>21 and total2<22 and total2>totaldea2:
             print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name1,"さんもオーバーしている為、今回のゲームは",name2,"さんの勝ちです。")
-          elif total2>21:
+          elif total2>21 and total1<22 and total1>totaldea2:
             # プレイヤー２オーバー
             print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name2,"さんもオーバーしている為、今回のゲームは",name1,"さんの勝ちです。")
           elif total1>21 and total2>21:
@@ -537,9 +537,9 @@ if 1<people<4:
 
           if totaldea3>21:
           # プレイヤー１オーバー
-            if total1>21:
+            if total1>21 and total2<22 and total2>totaldea2:
               print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name1,"さんもオーバーしている為、今回のゲームは",name2,"さんの勝ちです。")
-            elif total2>21:
+            elif total2>21 and total1<22 and total1>totaldea2:
               # プレイヤー２オーバー
               print("ディーラー：おっと、21を超えてしまいましたね。私の負けです。",name2,"さんもオーバーしている為、今回のゲームは",name1,"さんの勝ちです。")
             elif total1>21 and total2>21:
