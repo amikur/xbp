@@ -527,6 +527,15 @@ if 1<people<4:
             # プレーヤー１勝ち且つプレイヤー２勝ち
             print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
 
+          elif total1==totaldea2 and 22>total2>totaldea2:
+            # プレーヤー１引き分け且つプレイヤー２勝ち
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは引き分け、おめでとうございます、",name2,"さんは勝ちです。")
+
+          elif total2==totaldea2 and 22>total1>totaldea2:
+            # プレーヤー１勝ち且つプレイヤー２引き分け
+            print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name2,"さんは引き分け、おめでとうございます、",name1,"さんは勝ちです。")
+
+
         num2 = ( 8, 9, 10, 10, 10)
         if totaldea2<17:
           dea4=random.sample(num2, k=1)
@@ -612,6 +621,14 @@ if 1<people<4:
             elif 22>total2>totaldea3 and 22>total1>totaldea3:
               # プレーヤー１勝ち且つプレイヤー２勝ち
               print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。おめでとうございます。",name1,"さん、",name2,"さんは勝ちです。")
+
+            elif total1==totaldea3 and 22>total2>totaldea3:
+            # プレーヤー１引き分け且つプレイヤー２勝ち
+              print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name1,"さんは引き分け、おめでとうございます、",name2,"さんは勝ちです。")
+
+            elif total2==totaldea3 and 22>total1>totaldea3:
+              # プレーヤー１勝ち且つプレイヤー２引き分け
+              print("ディーラー：",name1,"さんの合計は",total1,"で、",name2,"さんの合計は",total2,"です。",name2,"さんは引き分け、おめでとうございます、",name1,"さんは勝ちです。")
   
 
   # プレイ人数が3名の場合ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
