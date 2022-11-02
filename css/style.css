@@ -282,14 +282,16 @@ img[src="./de12/images/step05.png"] {
     
 }
 
-#animation {
+
+
+.animation {
     text-align: center;
-    font-size: 50px;
     font-weight: bold;
     color: #000000;
     padding-left: 20px;
     padding-right: 20px;
     font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 20px;
     }
 .lead {
     padding-left: 20px;
@@ -308,6 +310,10 @@ img[src="./de12/images/step05.png"] {
     padding-left: 40px;
     padding-right: 60px;
     overflow: scroll;
+}
+
+.slide-in_inner {
+    font-size: 50px;
 }
 }
    
