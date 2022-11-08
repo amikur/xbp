@@ -14,7 +14,7 @@ from matplotlib import font_manager
 ########################
 targets = ["京急本線", "京急逗子線"]
 factor_1 = "築年数"
-factor_2 = "家賃"
+factor_2 = "階数"
 ########################
 
 # 日本語の設定
