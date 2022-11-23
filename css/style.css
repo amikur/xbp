@@ -371,4 +371,113 @@ img[src="./de12/images/step05.png"] {
          100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
         }
 
-
+        body{
+            background:#f4f4f4;
+          }
+          
+          img{
+            max-width:100%;
+            height:auto;
+          }
+          
+          h1{
+            text-align: center;
+            font-size:1.5rem;
+            padding: 30px 0;
+          }
+          
+          .fuwa1 {
+            font-size:1.3rem;
+            margin:0 0 20px 0;
+          }
+          
+          /*写真と文章のセット　装飾のためのCSS*/
+          
+          .area{
+            position:relative;
+            margin:0 auto 20% auto;
+            padding: 0 30px;
+            max-width:1000px;
+            width:100%;
+          }
+          
+          .area figure{
+            position:relative;
+            left:0;
+            top:0;
+            width:40%;
+            line-height: 0;
+          }
+          
+          .area:nth-child(2n) figure{
+            left:50%;
+          }
+          
+          .area .box{
+            position:absolute;
+            top:40%;
+            left:30%;
+            background:#fff;
+            padding:30px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.1);
+          }
+          
+          .area:nth-child(2n) .box{
+            left:inherit;
+            right:30%;
+          }
+          
+          /*Footerを下付きにする*/
+          
+          footer{
+            position:absolute;
+            width:100%;
+            z-index: 999;
+            /*装飾のためのCSS*/
+            padding:20px 0;
+            bottom:80px;
+            height:80px;
+            color: #fff;
+            text-align: center;
+            background:#333;
+          }
+          
+          footer a{
+            color:#fff; 
+          }
+          
+          /*＝＝＝＝＝＝＝＝＝＝＝タブレット以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+          
+          @media screen and (max-width:768px){
+          .area figure{
+            width:50%;
+          }
+            
+          footer{
+            position:inherit;
+          }
+          
+          }
+          
+          @media screen and (max-width:600px){
+          h2{
+            text-align: center;
+          }
+            
+          .area:nth-child(2n) figure {
+              left: 0;
+          }
+            
+          .area figure{
+            width:100%;
+          }
+          .area .box,
+          .area:nth-child(2n) .box{
+              position: relative;
+              top: 0;
+              left: 0;
+            right: inherit;
+            padding:20px;
+          }
+          
+          }
