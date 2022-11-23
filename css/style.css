@@ -33,6 +33,7 @@ html, body {
 body {
     margin: 0;
     padding: 0;
+    margin-bottom: 8000px;
  }
 
  .first-view-text {
@@ -44,6 +45,7 @@ body {
 }
 .contents {
     font-family: 'Zen Old Mincho', serif;
+    
 }
 
 
@@ -115,7 +117,7 @@ body {
     font-family: 'Oooh Baby', cursive;
 }
 .lead {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 150px auto;
     font-size: 25px;
     margin-bottom: 200px;
@@ -371,9 +373,7 @@ img[src="./de12/images/step05.png"] {
          100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
         }
 
-        body{
-            background:#f4f4f4;
-          }
+        
           
           img{
             max-width:100%;
@@ -392,7 +392,26 @@ img[src="./de12/images/step05.png"] {
           }
           
           /*写真と文章のセット　装飾のためのCSS*/
+        .luxy {
+            margin-top: 60px;
+        }
+
+        .box luxy-el {
+            padding-top: 1000px;
+
+
+        }
           
+        .area1 {
+            padding-top: 700px;
+            
+        }
+        
+
+
+        .area2 {
+            margin-top: 100px;
+        }
           .area{
             position:relative;
             margin:0 auto 20% auto;
