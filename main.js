@@ -1,6 +1,3 @@
-luxy.init();
-
-
 (function(root, factory) {
 	'use strict';
 
