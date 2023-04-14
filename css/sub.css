@@ -42,67 +42,10 @@ body {
  }
 .item-list {
     font-family: 'Zen Maru Gothic', sans-serif;
-    background-color: rgb(243, 243, 243);
-    
-    
 }
-.midasi {
-  background-color: rgb(243, 243, 243);
-  text-align: center;
-}
-
 .contents {
     font-family: 'Zen Old Mincho', serif;
     text-align: center;
-    
-    
-}
-
-.XBPclass {
-  font-size: 50px;
-  text-align: center;
-  border-right: 2px solid rgba(0, 0, 0, 0.24);
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 追加することで、横方向にも中央寄せになります */
-  
-  
-}
-
-
-.de12img {
-  border-radius: 15px;
-  height: 300px;
-  width: 300px;
-}
-
-.defaimg {
-  border-radius: 15px;
-  height: 300px;
-  width: 300px;
-}
-
-.de34img {
-  border-radius: 15px;
-  height: 300px;
-  width: 300px;
-}
-
-.de56img {
-  border-radius: 15px;
-  height: 300px;
-  width: 300px;
-}
-
-
-
-.EA {
-  font-size: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 追加することで、横方向にも中央寄せになります */
-
-  border-right: 2px solid rgba(0, 0, 0, 0.24);
 }
 
 .line ::after {
@@ -208,8 +151,7 @@ body {
 
 
 
-
-/*contentsフェードインここから　*/
+/*contentsフェードインここから　（中止）*/
 
 .slide-in {
 	overflow: hidden;
@@ -320,6 +262,13 @@ body {
     list-style-type: none
 }
 
+img[src="./de12/images/21830aIMGL99841974_TP_V.jpg"] {
+    border-radius: 20%;
+}
+
+img[src="./de12/images/step05.png"] {
+    border-radius: 20%;
+}
 
 
 
@@ -376,9 +325,19 @@ body {
          100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
         }
 
-    
+        
+          
+          img{
+            max-width:100%;
+            height:auto;
+          }
+        
           
 
+          .fuwa1 {
+            font-size: 1.3rem;
+            margin:0 0 20px 0;
+          }
           
           /*写真と文章のセット　装飾のためのCSS*/
         .luxy {
@@ -402,7 +361,42 @@ body {
           width: 1px;
 
         }
+        
+      .de12img {
+        border-radius: 10px;
+        height: 500px;
+      }
 
+      .defaimg {
+        border-radius: 30px;
+        height: 500px;
+        width: 1000px;
+      }
+
+      .de34img {
+        border-radius: 90px;
+        height: 500px;
+        width: 600px;
+      }
+
+      .de56img {
+        border-radius: 120px;
+        height: 500px;
+        width: 600px;
+      }
+
+
+        .area2 {
+            margin-top: 1px;
+        }
+
+        .defaarea {
+          height: 300px;
+        }
+
+        .luxy-el {
+          height: 150px;
+        }
 
         
           .area{

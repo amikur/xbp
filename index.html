@@ -27,18 +27,14 @@
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-<script src="main.js"></script>
 
 
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-        <a class="header img">
-          <div class="xxx"><a href="./index.html">
+        <a class="header img" href="./index.html">
             <img src="./images/0_XBlogo.png" alt="XBPロゴ">
-          </div>
         </a>
         </div>
     </header>
@@ -58,7 +54,7 @@
         </div>
     </div>
     
-    <div>
+    <div class="greeting">
         <p id="animation">はじめまして。<br></p>
         <script src="./jquery.js"></script>
     </div>
@@ -67,116 +63,89 @@
             <br>至らない点もあるかと思いますが、何卒よろしくお願いいたします。
         </p>
     </div>
+
+
     <div class="contents">
-      <p>
-          <span class="slide-in leftAnime">
-            <div class="line">
-          <span class="slide-in_inner">CONTENTS</span>
-            </div>
-          </span>
-          </p>
+        <p class="midasi">
+            <span class="slide-in leftAnime">
+            <span class="slide-in_inner">CONTENTS</span>
+            </span>
+            </p>
+
+            
+        <ul class="item-list">
+            <p class="XBPclass">XBP Classes</p>
+            
+            <li>
+                <a href="./de12/index.html"target="_blank"><img class="de12img" src="./images/pcprograming.png" alt="デザイン演習画像"></a>
+                <dl>
+                    <dt>デザイン演習Ⅰ・Ⅱ</dt>
+                    <dd>文化人類学的な観察力と共感力、オープンイノベーションに参加する為の基礎的なデジタル技術を会得する</dd>
+                </dl>
+            </li>
+            <li>
+                <a href="./digi_fab/index.html"target="_blank"><img class="defaimg" src="./images/3dprinter.png" alt="デジタルファブリケーション画像"></a>
+                <dl>
+                    <dt>デジタルファブリケーション</dt>
+                    <dd>創造的な問題解決能力を得るための道具としてデジタルファブリケーションを<br>扱えるようにする</dd>
+                </dl>
+            </li>
+            <li>
+                <a href="./de34/index.html"target="_blank"><img class="de34img" src="./images/micon.png" alt="デザイン34演習画像"></a>
+                <dl>
+                    <dt>デザイン演習Ⅲ・Ⅳ</dt>
+                    <dd>イノベーションを起こせる可能性がある技術的なことへの造詣を深める</dd>
+                </dl>
+            </li>
+            <li>
+                <a href="./de56/index.html"target="_blank"><img class="de56img" src="./images/bisinessman.png" alt="デザイン演習56画像"></a>
+                <dl>
+                    <dt>デザイン演習Ⅴ・Ⅵ</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="item-list">
+            <p class="EA">Extracurricular Activities</p>
+            
+            <li>
+                <a href="./de12/index.html"target="_blank"><img class="de12img" src="./images/comingsoon.png"></a>
+                <dl>
+                    <dt>更新予定</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="./digi_fab/index.html"target="_blank"><img class="defaimg" src="./images/comingsoon.png"></a>
+                <dl>
+                    <dt>更新予定</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="./de34/index.html"target="_blank"><img class="de34img" src="./images/comingsoon.png"></a>
+                <dl>
+                    <dt>更新予定</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li>
+                <a href="./de56/index.html"target="_blank"><img class="de56img" src="./images/comingsoon.png"></a>
+                <dl>
+                    <dt>更新予定</dt>
+                    <dd></dd>
+                </dl>
+            </li>
+        </ul>
+            
     </div>
-
-    <div id="wrpeer">
-      
-      <div id="luxy">
-        <a href="./de12/index.html"target="_blank">
-        <section class="area">
-        <figure class="luxy-el" data-speed-y="8" data-offset="10"><img class="de12img" src="./images/1263610094-code-820275_1920-82y3-1920x1280-MM-100.jpg" alt=""></figure>
-        <div class="area1">
-        <div class="area1text">
-        <div class="box luxy-el">
-          <h2 class="fuwa1">１学年後期:デザイン演習Ⅰ・Ⅱ</h2>
-          <p>文化人類学的な観察力と共感力、オープンイノベーションに参加する為の<br>基礎的なデジタル技術を会得する</p>
-        </div>
-        </div>
-        </div>
-        </section>
-        </a>
-        
-
-      
-        <a href="./digi_fab/index.html"target="_blank">
-        <section class="area">
-        <div class="defaarea">
-        <div class="defaimg">
-        <figure class="luxy-el" data-horizontal="-10" data-speed-y="-2"><img class="defaimg" src="./images/mh3UOSdaoOcj67v1669367160_1669367185.jpg"></figure>
-        </div>
-        <div class="area2">
-        <div class="box luxy-el" data-speed-y="-3">
-        <h2 class="fuwa2">１学年後期：デジタルファブリケーション</h2>
-          <p>創造的な問題解決能力を得るための道具としてデジタルファブリケーションを扱えるようにする</p>
-        </div>
-        </div>
-        </div>
-        </section>
-        </a>
-
-        <a href="./de34/index.html"target="_blank">
-          <section class="area">
-          <div class="defaarea">
-          <div class="defaimg">
-          <figure class="luxy-el" data-horizontal="-20" data-speed-y="-1"><img class="de34img" src="./de34/images/maicon.jpg"></figure>
-          </div>
-          <div class="area2">
-          <div class="box luxy-el" data-speed-y="-1">
-          <h2 class="fuwa2">2学年前期：デザイン演習Ⅲ・Ⅳ</h2>
-            <p>ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</p>
-          </div>
-          </div>
-          </div>
-          </section>
-          </a>
-
-
-          <a href="./de56/index.html"target="_blank">
-            <section class="area">
-            <div class="defaarea">
-            <div class="defaimg">
-            <figure class="luxy-el" data-horizontal="-1" data-speed-y="-1"><img class="de56img" src="./de56/images/bissiness.jpg"></figure>
-            </div>
-            <div class="area2">
-            <div class="box luxy-el" data-speed-y="0">
-            <h2 class="fuwa2">2学年前期：デザイン演習Ⅴ・Ⅵ</h2>
-              <p>ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー</p>
-            </div>
-            </div>
-            </div>
-            </section>
-            </a>
-  
-<!--科目追加はここから-->
-        
-        <section class="area">
-          <div class="roding">
-          <div class="rodeimg">
-          <figure class="luxy-el" data-horizontal="100" data-speed-y="-2"><img class="rode" src="./images/reload-icon01_1200x630.png"></figure>
-          </div>
-          <div class="area3">
-          <div class="box luxy-el" data-horizontal="10" data-speed-y="0">
-          <h2 class="fuwa2">更新予定</h2>
-            <p>※今後更新します　　　　　　　　　　　　　　　　　　　　　　　</p>
-          </div>
-          </div>
-          </div>
-          </section>
-      </div><!--/luxy-->    
-      </div>
-    </main>
-      
-          
-      <script src="./sub.js"></script>
-      <script src="./main.js"></script>
     
     
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
     crossorigin="anonymous"></script>
-    <script src="./luxy.min.js" charset="utf-8"></script>
-<script charset="utf-8">
-    luxy.init();
-</script>
+
 <script src="./jquery.js"></script>
 </body>
 </html>
