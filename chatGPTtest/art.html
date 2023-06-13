@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>警告メッセージのコード</title>
+  <style>
+    body {
+      background-color: #FF0000;
+      animation: backgroundAnimation 2s ease-in-out infinite;
+    }
+    
+    @keyframes backgroundAnimation {
+      0% { background-color: #FF0000; }
+      50% { background-color: #FFFF00; }
+      100% { background-color: #FF0000; }
+    }
+    
+    .warning {
+      color: #FFFFFF;
+      font-size: 24px;
+      text-align: center;
+      padding: 20px;
+      border: 2px solid #FFFFFF;
+      border-radius: 5px;
+      width: 400px;
+      margin: 100px auto;
+      background-color: #FF0000;
+      animation: pulseAnimation 1s ease-in-out infinite;
+    }
+    
+    @keyframes pulseAnimation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="warning">
+    <h1>警告</h1>
+    <p>このページは危険な内容を含んでいます。</p>
+  </div>
+</body>
+</html>
