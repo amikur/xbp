@@ -7,7 +7,7 @@
 .logo img {
     border-radius: 50%;
     width: 150px;
-    height: 150px;/* 画像のトリミング */
+    height: 150px;
     object-fit: cover; /* 画像のトリミング */
 }
 
