@@ -70,6 +70,10 @@ p{
     padding: 100px;
 }
 
+.philo {
+    width: 50%;  /* 幅を50％に設定 */
+  height: auto; /* 高さを自動調整 */
+}
 
 
 
