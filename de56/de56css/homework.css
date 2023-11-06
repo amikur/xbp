@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
 /* フォントを指定したいところで */
 
-log img{
+logo img{
     border-radius: 50%;
     width: 150px;
     height: 150px;
