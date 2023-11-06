@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* 冒頭でimport */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+/* フォントを指定したいところで */
+
+logo img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+logotohome img{
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+
+
+/* ========== common ========== */
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff86;
+	
+
+}
+h1{
+    text-indent: 0em;
+}
+h2{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+h3{
+    margin-left: 2em;
+}
+div{
+    margin-top: 1em;
+    margin-left: 3em;
+
+}
+p{
+    margin-left: 3em;
+}
+
+
+
+.header-de56 {
+    width: auto;
+    height: 120px;
+    
+    background-color: rgb(255, 255, 255);
+}
+
+.header-text {
+    font-size: 16px;
+	font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 60px;
+}
+
+.main-de56 {
+    background-color: #f1ddc15b;
+    margin: 0;
+    padding: 100px;
+}
+
+.philo {
+    width: 50%;  /* 幅を50％に設定 */
+  height: auto; /* 高さを自動調整 */
+}
+
+
+
