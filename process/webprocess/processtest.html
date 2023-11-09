@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>iPhoneカメラ起動</title>
+  <link rel="stylesheet" href="/process/Pcss/process.css">
+</head>
+<body>
+  <button id="start-camera">カメラを起動</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.18.1/video.min.js"></script>
+  <script>
+    const video = document.querySelector("video");
+
+    const startCamera = () => {
+      const constraints = {
+        audio: false,
+        video: {
+          facingMode: "user",
+          width: 640,
+          height: 480,
+        },
+      };
+
+      navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        video.srcObject = stream;
+        video.play();
+      }).catch((err) => {
+        console.log(err);
+      });
+    };
+
+    document.querySelector("#start-camera").addEventListener("click", startCamera);
+  </script>
+</body>
+</html>
