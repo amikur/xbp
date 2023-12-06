@@ -1,6 +1,6 @@
 /* ページ全体の基本的なスタイル設定 */
 body, html {
-  margin: 0;
+  margin: 10px 10px 10px 10px;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -9,9 +9,9 @@ body, html {
 
 /* テキストボックスのスタイル設定 */
 textarea {
-  width: calc(100% - 20px); /* パディングを考慮した幅 */
+  width: 95%; /* パディングを考慮した幅 */
   padding: 10px; /* テキストボックス内の余白 */
-  margin: 0 10px 10px 10px; /* 下のみにマージンを設定 */
+  margin: 0 0px 10px 0px; /* 下のみにマージンを設定 */
   border: 1px solid #ccc; /* 枠線のスタイル */
   font-size: 16px; /* フォントサイズ */
   box-sizing: border-box; /* ボーダーとパディングを幅に含める */
