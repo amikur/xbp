@@ -11,7 +11,7 @@ body, html {
 textarea {
   width: calc(100% - 20px); /* パディングを考慮した幅 */
   padding: 10px; /* テキストボックス内の余白 */
-  margin: 0 0 10px 0; /* 下のみにマージンを設定 */
+  margin: 0 10px 10px 10px; /* 下のみにマージンを設定 */
   border: 1px solid #ccc; /* 枠線のスタイル */
   font-size: 16px; /* フォントサイズ */
   box-sizing: border-box; /* ボーダーとパディングを幅に含める */

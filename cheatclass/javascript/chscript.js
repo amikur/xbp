@@ -79,3 +79,44 @@ function copyAndMoveText() {
 // コピー用ボタンのクリックイベントハンドラを設定
 const copyBtn = document.getElementById('copy-btn');
 copyBtn.addEventListener('click', copyAndMoveText);
+
+// テキストボックスの内容をlocalStorageに保存する関数
+function saveToLocalStorage() {
+    localStorage.setItem('realtimeOutput', document.getElementById('realtime-output').value);
+    localStorage.setItem('savedText', document.getElementById('saved-text').value);
+    localStorage.setItem('pastContents', document.getElementById('past-contents').value);
+    localStorage.setItem('summaryResult', document.getElementById('summary-result').value);
+}
+
+// ページ読み込み時にlocalStorageからテキストボックスの内容を復元する
+window.onload = function() {
+    document.getElementById('realtime-output').value = localStorage.getItem('realtimeOutput') || '';
+    document.getElementById('saved-text').value = localStorage.getItem('savedText') || '';
+    document.getElementById('past-contents').value = localStorage.getItem('pastContents') || '';
+    document.getElementById('summary-result').value = localStorage.getItem('summaryResult') || '';
+};
+
+// リセットボタンのクリックイベントハンドラ
+const resetBtn = document.getElementById('reset-btn');
+resetBtn.addEventListener('click', () => {
+    if (confirm('全てのテキストボックスの内容をリセットしますか？')) {
+        // localStorageからも削除
+        localStorage.removeItem('realtimeOutput');
+        localStorage.removeItem('savedText');
+        localStorage.removeItem('pastContents');
+        localStorage.removeItem('summaryResult');
+
+        // 全てのテキストボックスをクリア
+        document.getElementById('realtime-output').value = '';
+        document.getElementById('saved-text').value = '';
+        document.getElementById('past-contents').value = '';
+        document.getElementById('summary-result').value = '';
+    }
+});
+
+// テキストボックスの内容が変更されたときにlocalStorageに保存
+document.getElementById('realtime-output').addEventListener('input', saveToLocalStorage);
+document.getElementById('saved-text').addEventListener('input', saveToLocalStorage);
+document.getElementById('past-contents').addEventListener('input', saveToLocalStorage);
+document.getElementById('summary-result').addEventListener('input', saveToLocalStorage);
+
