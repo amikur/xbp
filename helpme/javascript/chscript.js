@@ -27,9 +27,12 @@ recognition.onresult = function(event) {
     realtimeOutput.value = finalTranscript + interimTranscript;
 
     if (realtimeOutput.value.length >= 2000) {
-        savedText.value += realtimeOutput.value;
-        realtimeOutput.value = '';
-        finalTranscript = '';
+        if (savedText.value.length > 0) {
+            savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
+        }
+        savedText.value += realtimeOutput.value; // テキストを移動
+        realtimeOutput.value = ''; // リアルタイム音声出力をクリア
+        finalTranscript = ''; // 最終結果をリセット
     }
 };
 
@@ -53,9 +56,13 @@ startBtn.addEventListener('click', function() {
 stopBtn.addEventListener('click', function() {
     recognition.isRecognizing = false;
     recognition.stop();
-    savedText.value += realtimeOutput.value;
-    realtimeOutput.value = '';
-    finalTranscript = '';
+
+    if (savedText.value.length > 0) {
+        savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
+    }
+    savedText.value += realtimeOutput.value;// テキストを移動
+    realtimeOutput.value = '';// リアルタイム音声出力をクリア
+    finalTranscript = '';// 最終結果をリセット
 });
 
 recognition.isRecognizing = false;
