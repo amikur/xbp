@@ -59,3 +59,23 @@ stopBtn.addEventListener('click', function() {
 });
 
 recognition.isRecognizing = false;
+
+// コピーして過去の内容に移動する関数
+function copyAndMoveText() {
+    const savedText = document.getElementById('saved-text');
+    const pastContents = document.getElementById('past-contents');
+    
+    // クリップボードにコピー
+    navigator.clipboard.writeText(savedText.value).then(() => {
+        // コピー成功時に過去の内容にテキストを移動
+        pastContents.value += savedText.value + "\n"; // 既存のテキストに新しいテキストを追加
+        savedText.value = ''; // 元のテキストボックスをクリア
+        alert('テキストが過去の内容に移動されました。');
+    }).catch(err => {
+        console.error('コピーに失敗しました: ', err);
+    });
+}
+
+// コピー用ボタンのクリックイベントハンドラを設定
+const copyBtn = document.getElementById('copy-btn');
+copyBtn.addEventListener('click', copyAndMoveText);
