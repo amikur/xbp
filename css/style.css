@@ -477,13 +477,25 @@ margin-right: auto;
   background-color: rgba(0,0,0,0.4); /* 透明度を持たせる */
 }
 
+/* モーダルウィンドウのスタイル変更 */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 画面中央に表示 */
+  margin: 10% auto; /* 画面中央に表示 */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* 幅 */
+  width: 60%; /* 幅を調整 */
+  border-radius: 20px; /* 角丸スタイル */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* 影を付ける */
+  animation: fadeIn 0.5s; /* ふわっと表示するアニメーション */
+  position: relative;
 }
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 
 .close {
   color: #aaa;
@@ -497,4 +509,46 @@ margin-right: auto;
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.button-54 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+  padding: .9em 3em .9em 2em;
+  border: 1px solid #2589d0;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #2589d0;
+  font-size: 1em;
+  cursor: pointer; /* ボタンのようにカーソルを変更 */
+  text-decoration: none; /* テキストの下線を削除 */
+}
+
+.button-54::after {
+  position: absolute;
+  right: 2em;
+  transform: translateY(-50%);
+  transform-origin: left;
+  width: 2em;
+  height: .5em;
+  background-color: #2589d0;
+  clip-path: polygon(0 100%, 100% 100%, 70% 40%, 70% 90%, 0% 90%);
+  content: '';
+  transition: transform .3s;
+}
+
+.button-54:hover::after {
+  transform: translateY(-50%) scaleX(1.4);
+}
+
+.modal-image {
+  position: absolute; /* モーダルウィンドウ内での絶対位置指定 */
+  bottom: 20px; /* 下からの距離 */
+  right: 20px; /* 右からの距離 */
+  max-width: 100px; /* 画像の最大幅 */
+  max-height: 50px; /* 画像の最大高さ */
 }
