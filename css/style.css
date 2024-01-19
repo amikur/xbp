@@ -462,3 +462,39 @@ margin-right: auto;
 }
  
 /*ここまで*/
+
+/* モーダルウィンドウのスタイル */
+.modal {
+  display: none; /* 最初は非表示 */
+  position: fixed; /* 画面上に固定 */
+  z-index: 1; /* 他の要素の上に表示 */
+  left: 0;
+  top: 0;
+  width: 100%; /* フル幅 */
+  height: 100%; /* フル高さ */
+  overflow: auto; /* スクロール可能に */
+  background-color: rgb(0,0,0); /* 背景色 */
+  background-color: rgba(0,0,0,0.4); /* 透明度を持たせる */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 画面中央に表示 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 幅 */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
