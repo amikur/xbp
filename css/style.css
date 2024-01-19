@@ -550,5 +550,5 @@ margin-right: auto;
   bottom: 20px; /* 下からの距離 */
   right: 20px; /* 右からの距離 */
   max-width: 100px; /* 画像の最大幅 */
-  max-height: 50px; /* 画像の最大高さ */
+  max-height: 50px; 
 }
