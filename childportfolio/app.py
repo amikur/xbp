@@ -61,20 +61,27 @@ def handle_image_message(event):
     # 画像の内容を取得
     message_content = line_bot_api.get_message_content(message_id)
 
+    # 保存先ディレクトリのパス
+    save_directory = 'xbp/childportfolio/poimages'
+    if not os.path.exists(save_directory):
+        os.makedirs(save_directory)
+
     # 画像をサーバーに保存
-    with open(f"images/{message_id}.jpg", "wb") as f:
+    with open(f"{save_directory}/{message_id}.jpg", "wb") as f:
         for chunk in message_content.iter_content():
             f.write(chunk)
-
-    # 応答メッセージの送信（オプション）
+    
+    # 応答メッセージの送信
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text="画像を受け取りました")
     )
 
-@app.route('/path/to/poimages', methods=['GET'])
+
+@app.route('/path/to/images', methods=['GET'])
 def get_images():
-    image_files = os.listdir('poimages')  # 画像ファイルのリストを取得
-    image_urls = [f"{request.url_root}poimages/{filename}" for filename in image_files]
+    image_files = os.listdir('xbp/childportfolio/poimages')
+    image_urls = [f"{request.url_root}xbp/childportfolio/poimages/{filename}" for filename in image_files]
     return jsonify(image_urls)
+
 
