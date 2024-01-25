@@ -72,9 +72,9 @@ def handle_image_message(event):
         TextSendMessage(text="画像を受け取りました")
     )
 
-@app.route('/path/to/images', methods=['GET'])
+@app.route('/path/to/poimages', methods=['GET'])
 def get_images():
-    image_files = os.listdir('images')  # 画像ファイルのリストを取得
-    image_urls = [f"{request.url_root}images/{filename}" for filename in image_files]
+    image_files = os.listdir('poimages')  # 画像ファイルのリストを取得
+    image_urls = [f"{request.url_root}poimages/{filename}" for filename in image_files]
     return jsonify(image_urls)
 
