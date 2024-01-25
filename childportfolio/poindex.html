@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子供の活動ポートフォリオ</title>
+    <link rel="stylesheet" href="postyle.css">
+</head>
+<body>
+    <header>
+        <h1>子供の活動ポートフォリオ</h1>
+    </header>
+    <main>
+        <section>
+            <h2>活動一覧</h2>
+            <!-- 活動のリストや説明をここに追加 -->
+        </section>
+        <section>
+            <h2>写真ギャラリー</h2>
+            <div id="gallery">
+                <!-- 写真をここに追加 -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 子供の活動ポートフォリオ</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/path/to/images')  // サーバーから画像リストを取得するエンドポイント
+                .then(response => response.json())
+                .then(images => {
+                    const gallery = document.getElementById('gallery');
+                    images.forEach(image => {
+                        const img = document.createElement('img');
+                        img.src = image;  // 画像のURL
+                        gallery.appendChild(img);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        });
+        </script>
+        
+</body>
+</html>
