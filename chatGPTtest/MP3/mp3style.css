@@ -1,0 +1,13 @@
+/* スタイルは外部CSSファイルまたは<head>内に記述できます。 */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+canvas {
+  border: 1px solid #fff;
+}
