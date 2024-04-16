@@ -7,20 +7,43 @@ body, html {
   box-sizing: border-box;
 }
 
-/* テキストボックスのスタイル設定 */
+/* テキストボックスのスタイル設定*/
+
 textarea {
-  width: 95%; /* パディングを考慮した幅 */
-  padding: 10px; /* テキストボックス内の余白 */
-  margin: 0 0px 10px 0px; /* 下のみにマージンを設定 */
-  border: 1px solid #ccc; /* 枠線のスタイル */
-  font-size: 16px; /* フォントサイズ */
-  box-sizing: border-box; /* ボーダーとパディングを幅に含める */
+  width: 90%;             /* テキストボックスの幅をページの90%に設定 */
+  margin: 10px auto;      /* 上下に10pxのマージン、水平方向は中央に配置 */
+  padding: 10px;          /* 内側に10pxのパディングを設定 */
+  border: 2px solid #2589d0; /* 境界線を青色で2px固定幅に設定 */
+  border-radius: 10px;    /* 角を10pxで丸める */
+  background-color: #f9f9f9; /* 背景色を薄灰色に設定 */
+  font-size: 16px;        /* フォントサイズを16pxに設定 */
+  color: #333;            /* フォントの色をダークグレーに設定 */
+  resize: none;           /* ユーザーによるリサイズを無効化 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
 }
+
 
 /* ボタンのスタイル設定 */
 button {
   margin: 10px 0; /* 上下のマージン */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding: .9em 2em;
+  border: 1px solid #2589d0;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #2589d0;
+  font-size: 1em;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;  /* ボタンを中央寄せにする */
+  gap: 10px;                /* ボタン間に10pxのスペースを追加 */
+}
+
 
 #copy-btn {
   padding: 10px;

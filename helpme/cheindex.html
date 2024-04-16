@@ -6,18 +6,19 @@
     <link rel="stylesheet" href="./css/chstyle.css">
 </head>
 <body>
+<div class="button-container">
     <button id="start-btn">音声認識を開始</button>
     <button id="stop-btn">音声認識を停止</button>
     <button id="reset-btn">リセット</button> <!-- リセットボタン -->
-
-    <p>リアルタイム音声出力:</p>
+</div>
+    <p>リアルタイム音声出力</p>
     <textarea id="realtime-output" rows="10" disabled></textarea>
 
-    <p>要約待ちのテキスト(2000文字に達すると自動で移動します。コピーしてchatGPTで要約してください):</p>
+    <p>要約待ちのテキスト(2000文字に達すると自動で移動します。コピーしてchatGPTで要約してください)</p>
     <textarea id="saved-text" rows="15" disabled></textarea>
-    <button id="copy-btn">テキストをコピーして過去の内容に移動</button>
+    <button id="copy-btn">テキストをコピーして<br>過去の内容に移動</button>
 
-    <p>過去の内容（コピーされたテキストは全てこのテキストボックスに移動します）:</p>
+    <p>過去の内容（コピーされたテキストは全てこのテキストボックスに移動します）</p>
     <textarea id="past-contents" rows="15" disabled></textarea>
 
     <script src="./javascript/chscript.js"></script>
