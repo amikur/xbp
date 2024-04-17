@@ -127,3 +127,5 @@ document.getElementById('saved-text').addEventListener('input', saveToLocalStora
 document.getElementById('past-contents').addEventListener('input', saveToLocalStorage);
 document.getElementById('summary-result').addEventListener('input', saveToLocalStorage);
 
+
+
