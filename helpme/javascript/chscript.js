@@ -127,5 +127,16 @@ document.getElementById('saved-text').addEventListener('input', saveToLocalStora
 document.getElementById('past-contents').addEventListener('input', saveToLocalStorage);
 document.getElementById('summary-result').addEventListener('input', saveToLocalStorage);
 
+window.onload = function() {
+    // テキストボックスを取得
+    const realtimeOutput = document.getElementById('realtime-output');
+
+    // テキストボックスを編集可能にする
+    realtimeOutput.disabled = false;
+
+    // 他の初期化コード...
+};
+
+
 
 
