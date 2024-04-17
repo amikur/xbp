@@ -11,15 +11,24 @@
     <button id="stop-btn">音声認識を停止</button>
     <button id="reset-btn">リセット</button> <!-- リセットボタン -->
 </div>
-    <p>リアルタイム音声出力</p>
-    <textarea id="realtime-output" rows="10" disabled></textarea>
-
-    <p>要約待ちのテキスト(2000文字に達すると自動で移動します。コピーしてchatGPTで要約してください。文字の修正はここで。)</p>
-    <textarea id="saved-text" rows="15"></textarea>
+<div class="textareas-container">
+    <div class="left-container">
+    <h4>リアルタイム音声出力</h4>
+    <textarea id="realtime-output" rows="20" disabled></textarea>
+    </div>
+  
+    <div class="right-container">
+    <h4>要約待ちのテキスト</h4>
+    <textarea id="saved-text" rows="20"></textarea>
+    </div>
+</div>
+    <div id="copy-btn-container">
     <button id="copy-btn">テキストをコピーして<br>過去の内容に移動</button>
-
+    </div>
+    <div class="past-container">
     <p>過去の内容（コピーされたテキストは全てこのテキストボックスに移動します）</p>
     <textarea id="past-contents" rows="15"></textarea>
+    </div>
 
     <script src="./javascript/chscript.js"></script>
 </body>

@@ -8,9 +8,9 @@ body, html {
 }
 
 /* テキストボックスのスタイル設定*/
-
 textarea {
-  width: 90%;             /* テキストボックスの幅をページの90%に設定 */
+  width: 90%;            /* テキストボックスの幅をページの90%に設定 */
+  height: 400px;
   margin: 10px auto;      /* 上下に10pxのマージン、水平方向は中央に配置 */
   padding: 10px;          /* 内側に10pxのパディングを設定 */
   border: 2px solid #2589d0; /* 境界線を青色で2px固定幅に設定 */
@@ -25,7 +25,7 @@ textarea {
 /* リアルタイムテキストボックスのスタイル設定 */
 textarea#realtime-output {
   width: 90%;             /* テキストボックスの幅をページの100%に設定 */
-  height: 300px;
+  height: 400px;
   padding: 10px;           /* 内側に10pxのパディングを設定 */
   border: 2px solid #2589d0; /* 境界線を青色で2px固定幅に設定 */
   border-radius: 10px;     /* 角を10pxで丸める */
@@ -76,9 +76,49 @@ button {
   gap: 10px;                /* ボタン間に10pxのスペースを追加 */
 }
 
-
+/* ボタンを含むコンテナに対するスタイル */
+#copy-btn-container {
+  display: flex;
+  justify-content: flex-end; /* ボタンを右側に寄せる */
+  margin-right: 5%;
+}
 #copy-btn {
   padding: 10px;
   margin-top: 10px;
   font-size: 16px;
+}
+
+.textareas-container {
+  display: flex;
+  flex-wrap: wrap; /* 必要に応じて折り返しを行う */
+  margin-bottom: 20px; /* 下部のテキストボックスとのマージン */
+}
+
+.left-container,
+.right-container {
+  flex: 1; /* flexboxアイテムとしての伸縮性を持たせる */
+  min-width: calc(50% - 20px); /* 最小幅を計算で設定（間の余白を考慮） */
+  margin-right: 20px; /* 右のコンテナとの間に余白を設定 */
+}
+
+.right-container {
+  margin-right: 0; /* 最後のコンテナなので余白を0に設定 */
+  height: 400px;
+}
+
+.past-container{
+  width: 100%;
+}
+/* 過去の内容テキストボックスの幅を100%に */
+#past-contents {
+  width: 90%;
+}
+
+/* 追加のスタイル調整 */
+@media screen and (max-width: 768px) { /* 画面幅が768px以下の場合に適用するスタイル */
+  .left-container,
+  .right-container {
+      flex-basis: 100%; /* コンテナを100%の幅にして縦に並べる */
+      margin-right: 0; /* 余白を0に設定 */
+  }
 }
