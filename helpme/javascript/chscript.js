@@ -95,14 +95,6 @@ function saveToLocalStorage() {
     localStorage.setItem('summaryResult', document.getElementById('summary-result').value);
 }
 
-// ページ読み込み時にlocalStorageからテキストボックスの内容を復元する
-window.onload = function() {
-    document.getElementById('realtime-output').value = localStorage.getItem('realtimeOutput') || '';
-    document.getElementById('saved-text').value = localStorage.getItem('savedText') || '';
-    document.getElementById('past-contents').value = localStorage.getItem('pastContents') || '';
-    document.getElementById('summary-result').value = localStorage.getItem('summaryResult') || '';
-};
-
 // リセットボタンのクリックイベントハンドラ
 const resetBtn = document.getElementById('reset-btn');
 resetBtn.addEventListener('click', () => {
@@ -159,6 +151,26 @@ function copyAndMoveText() {
         console.error('コピーに失敗しました: ', err);
     });
 }
+
+// ページ読み込み時に実行する関数を追加
+window.addEventListener('load', function(){
+    // 既存のlocalStorageのデータを復元
+    document.getElementById('realtime-output').value = localStorage.getItem('realtimeOutput') || '';
+    document.getElementById('saved-text').value = localStorage.getItem('savedText') || '';
+    document.getElementById('past-contents').value = localStorage.getItem('pastContents') || '';
+    const summaryResult = document.getElementById('summary-result');
+    if (summaryResult) {
+        summaryResult.value = localStorage.getItem('summaryResult') || '';
+    }
+
+    // すべてのテキストボックスを編集可能に設定
+    const textareas = document.querySelectorAll('textarea');
+    textareas.forEach(function(textarea) {
+        textarea.disabled = false;
+    });
+}); // ここでコメントを終了させる
+
+
 
 
 
