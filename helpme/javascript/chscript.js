@@ -127,15 +127,39 @@ document.getElementById('saved-text').addEventListener('input', saveToLocalStora
 document.getElementById('past-contents').addEventListener('input', saveToLocalStorage);
 document.getElementById('summary-result').addEventListener('input', saveToLocalStorage);
 
-window.onload = function() {
+// ページ読み込み時に実行する関数を追加
+window.addEventListener('load', function() {
     // テキストボックスを取得
     const realtimeOutput = document.getElementById('realtime-output');
-
     // テキストボックスを編集可能にする
     realtimeOutput.disabled = false;
 
-    // 他の初期化コード...
-};
+    // 既存のlocalStorageのデータを復元
+    document.getElementById('realtime-output').value = localStorage.getItem('realtimeOutput') || '';
+    document.getElementById('saved-text').value = localStorage.getItem('savedText') || '';
+    document.getElementById('past-contents').value = localStorage.getItem('pastContents') || '';
+    document.getElementById('summary-result').value = localStorage.getItem('summaryResult') || '';
+});
+
+// その他の初期化コード
+recognition.isRecognizing = false;
+
+// コピーして過去の内容に移動する関数
+function copyAndMoveText() {
+    const savedText = document.getElementById('saved-text');
+    const pastContents = document.getElementById('past-contents');
+    
+    // クリップボードにコピー
+    navigator.clipboard.writeText(savedText.value).then(() => {
+        // コピー成功時に過去の内容にテキストを移動
+        pastContents.value += savedText.value + "\n";
+        savedText.value = ''; // 元のテキストボックスをクリア
+        alert('テキストが過去の内容に移動されました。');
+    }).catch(err => {
+        console.error('コピーに失敗しました: ', err);
+    });
+}
+
 
 
 
