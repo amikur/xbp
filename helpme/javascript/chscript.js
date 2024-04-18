@@ -23,9 +23,13 @@ recognition.onresult = function(event) {
             interimTranscript += transcript;
         }
     }
-
+    
     realtimeOutput.value = finalTranscript + interimTranscript;
 
+    // Save the current content to localStorage
+    saveToLocalStorage();
+
+    // 2000文字を超えたらsavedTextに移動
     if (realtimeOutput.value.length >= 2000) {
         if (savedText.value.length > 0) {
             savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
@@ -35,6 +39,7 @@ recognition.onresult = function(event) {
         finalTranscript = ''; // 最終結果をリセット
     }
 };
+
 
 recognition.onerror = function(event) {
     console.error('音声認識エラー: ' + event.error);
@@ -103,13 +108,11 @@ resetBtn.addEventListener('click', () => {
         localStorage.removeItem('realtimeOutput');
         localStorage.removeItem('savedText');
         localStorage.removeItem('pastContents');
-        localStorage.removeItem('summaryResult');
 
         // 全てのテキストボックスをクリア
         document.getElementById('realtime-output').value = '';
         document.getElementById('saved-text').value = '';
         document.getElementById('past-contents').value = '';
-        document.getElementById('summary-result').value = '';
     }
 });
 
@@ -117,7 +120,6 @@ resetBtn.addEventListener('click', () => {
 document.getElementById('realtime-output').addEventListener('input', saveToLocalStorage);
 document.getElementById('saved-text').addEventListener('input', saveToLocalStorage);
 document.getElementById('past-contents').addEventListener('input', saveToLocalStorage);
-document.getElementById('summary-result').addEventListener('input', saveToLocalStorage);
 
 // ページ読み込み時に実行する関数を追加
 window.addEventListener('load', function() {
@@ -130,7 +132,6 @@ window.addEventListener('load', function() {
     document.getElementById('realtime-output').value = localStorage.getItem('realtimeOutput') || '';
     document.getElementById('saved-text').value = localStorage.getItem('savedText') || '';
     document.getElementById('past-contents').value = localStorage.getItem('pastContents') || '';
-    document.getElementById('summary-result').value = localStorage.getItem('summaryResult') || '';
 });
 
 // その他の初期化コード
@@ -158,10 +159,6 @@ window.addEventListener('load', function(){
     document.getElementById('realtime-output').value = localStorage.getItem('realtimeOutput') || '';
     document.getElementById('saved-text').value = localStorage.getItem('savedText') || '';
     document.getElementById('past-contents').value = localStorage.getItem('pastContents') || '';
-    const summaryResult = document.getElementById('summary-result');
-    if (summaryResult) {
-        summaryResult.value = localStorage.getItem('summaryResult') || '';
-    }
 
     // すべてのテキストボックスを編集可能に設定
     const textareas = document.querySelectorAll('textarea');
