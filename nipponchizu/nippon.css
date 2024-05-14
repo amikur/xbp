@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.map-container {
+  width: 80%;
+  max-width: 800px;
+}
+
+.prefecture {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1;
+  transition: transform 0.3s ease, fill 0.3s ease;
+  transform-origin: center;
+}
+
+.prefecture:hover {
+  fill: #f00;
+  transform: scale(1.1);
+}
