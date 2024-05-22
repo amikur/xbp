@@ -16,7 +16,9 @@ recognition.lang = 'ja-JP';
 
 let finalTranscript = '';
 
+// ローカルストレージからnameMapを取得
 const nameMap = new Map(JSON.parse(localStorage.getItem('nameMap')) || []);
+console.log('Loaded nameMap:', nameMap); // nameMapの内容をコンソールにログ出力
 
 recognition.onresult = function(event) {
     let interimTranscript = '';
@@ -25,10 +27,11 @@ recognition.onresult = function(event) {
         let transcript = event.results[i][0].transcript;
 
         // 固有名詞の置き換え
-        for (let [pronunciation, displayName] of nameMap.entries()) {
-            const regex = new RegExp(pronunciation, 'g');
+        nameMap.forEach((displayName, pronunciation) => {
+            // 正規表現で大文字小文字を区別せずに置き換える
+            const regex = new RegExp(pronunciation, 'gi');
             transcript = transcript.replace(regex, displayName);
-        }
+        });
 
         if (event.results[i].isFinal) {
             finalTranscript += transcript + ' ';
