@@ -20,6 +20,10 @@ h1, h2 {
   color: #333;
 }
 
+.explain{
+  text-align: center;
+}
+
 #custom-names {
   display: flex;
   flex-direction: column;
