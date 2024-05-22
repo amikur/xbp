@@ -26,24 +26,12 @@ recognition.onresult = function(event) {
     for (let i = event.resultIndex; i < event.results.length; ++i) {
         let transcript = event.results[i][0].transcript;
 
-        console.log('Original transcript:', transcript);
-
-        // 各単語に対して置き換えを行う
-        let words = transcript.split(' ');
-        words = words.map(word => {
-            nameMap.forEach((displayName, pronunciation) => {
-                const regex = new RegExp(pronunciation, 'gi');
-                if (regex.test(word)) {
-                    console.log('Applying regex:', regex);
-                    word = word.replace(regex, displayName);
-                }
-            });
-            return word;
+        // 固有名詞の置き換え
+        nameMap.forEach((displayName, pronunciation) => {
+            // 正規表現で大文字小文字を区別せずに置き換える
+            const regex = new RegExp(pronunciation, 'gi');
+            transcript = transcript.replace(regex, displayName);
         });
-
-        transcript = words.join(' ');
-
-        console.log('Replaced transcript:', transcript);
 
         if (event.results[i].isFinal) {
             finalTranscript += transcript + ' ';
@@ -51,9 +39,6 @@ recognition.onresult = function(event) {
             interimTranscript += transcript;
         }
     }
-
-    console.log('Final transcript:', finalTranscript);
-    console.log('Interim transcript:', interimTranscript);
     
     realtimeOutput.value = finalTranscript + interimTranscript;
 

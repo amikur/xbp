@@ -2,14 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>固有名詞の入力と管理</title>
+    <title>固有名詞の入力と管理（試験運用）</title>
     <link rel="stylesheet" href="./css/name-mng.css">
 </head>
 <body>
     <div class="container">
-        <h1>固有名詞の入力</h1>
+        <h1>固有名詞の入力（試験運用）</h1>
         <div id="custom-names">
-            <input type="text" id="pronunciation" placeholder="固有名詞の読み方（ひらがな）" class="input-box">
+            <input type="text" id="pronunciation" placeholder="固有名詞の読み方" class="input-box">
             <input type="text" id="display-name" placeholder="固有名詞の表示名" class="input-box">
             <button id="add-name-btn" class="button">追加</button>
         </div>
@@ -17,7 +17,10 @@
         <h2>登録された固有名詞</h2>
         <div id="name-list" class="name-list"></div>
 
-        <button id="back-to-transcription-btn" class="button">文字起こしページに戻る</button> <!-- 戻るボタン追加 -->
+        <div class="action-buttons">
+            <button id="toggle-edit-btn" class="button">編集</button>
+            <button id="back-to-transcription-btn" class="button">文字起こしページに戻る</button>
+        </div>
     </div>
 
     <script src="./javascript/name-management.js"></script>

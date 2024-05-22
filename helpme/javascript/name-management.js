@@ -1,4 +1,5 @@
 const nameMap = new Map(JSON.parse(localStorage.getItem('nameMap')) || []);
+let isEditMode = false;
 
 function saveNameMap() {
     localStorage.setItem('nameMap', JSON.stringify(Array.from(nameMap.entries())));
@@ -9,7 +10,31 @@ function updateNameList() {
     nameList.innerHTML = '';
     nameMap.forEach((displayName, pronunciation) => {
         const listItem = document.createElement('div');
-        listItem.textContent = `${pronunciation} -> ${displayName}`;
+        listItem.classList.add('name-item');
+
+        const textContent = document.createElement('span');
+        textContent.textContent = `${pronunciation} -> ${displayName}`;
+        listItem.appendChild(textContent);
+
+        if (isEditMode) {
+            const buttonContainer = document.createElement('div');
+            buttonContainer.classList.add('button-container');
+
+            const editButton = document.createElement('button');
+            editButton.textContent = '編集';
+            editButton.classList.add('edit-button');
+            editButton.addEventListener('click', () => editName(pronunciation, displayName));
+            buttonContainer.appendChild(editButton);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = '削除';
+            deleteButton.classList.add('delete-button');
+            deleteButton.addEventListener('click', () => deleteName(pronunciation));
+            buttonContainer.appendChild(deleteButton);
+
+            listItem.appendChild(buttonContainer);
+        }
+
         nameList.appendChild(listItem);
     });
 }
@@ -28,6 +53,27 @@ document.getElementById('add-name-btn').addEventListener('click', function() {
         document.getElementById('display-name').value = '';
     }
 });
+
+document.getElementById('toggle-edit-btn').addEventListener('click', function() {
+    isEditMode = !isEditMode;
+    this.textContent = isEditMode ? '編集完了' : '編集';
+    updateNameList();
+});
+
+function editName(pronunciation, displayName) {
+    document.getElementById('pronunciation').value = pronunciation;
+    document.getElementById('display-name').value = displayName;
+
+    nameMap.delete(pronunciation);
+    saveNameMap();
+    updateNameList();
+}
+
+function deleteName(pronunciation) {
+    nameMap.delete(pronunciation);
+    saveNameMap();
+    updateNameList();
+}
 
 window.addEventListener('load', updateNameList);
 
