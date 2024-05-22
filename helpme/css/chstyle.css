@@ -76,6 +76,27 @@ button {
   gap: 10px;                /* ボタン間に10pxのスペースを追加 */
 }
 
+/* 固有名詞登録ページへのボタンのスタイル */
+.button-differentiated {
+  margin-left: 30px; /* 他のボタンからの距離を設定 */
+  background-color: rgb(112, 112, 112) 106, 167; /* 色を変更 */
+}
+
+.button-differentiated:hover {
+  background-color: #d7d7d7; /* ホバーカラーを設定 */
+}
+
+.button-differentiated::after {
+  transform: rotate(45deg);
+  width: 5px;
+  height: 5px;
+  margin-left: 10px;
+  border-top: 2px solid #2589d0;
+  border-right: 2px solid #2589d0;
+  content: '';
+}
+
+
 /* ボタンを含むコンテナに対するスタイル */
 #copy-btn-container {
   display: flex;

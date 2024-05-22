@@ -12,6 +12,7 @@ recognition.lang = 'ja-JP';
 
 let finalTranscript = '';
 
+// 音声認識の結果が返ってきたときの処理
 recognition.onresult = function(event) {
     let interimTranscript = '';
 
@@ -26,20 +27,27 @@ recognition.onresult = function(event) {
     
     realtimeOutput.value = finalTranscript + interimTranscript;
 
-    // Save the current content to localStorage
-    saveToLocalStorage();
-
     // 2000文字を超えたらsavedTextに移動
     if (realtimeOutput.value.length >= 2000) {
-        if (savedText.value.length > 0) {
-            savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
-        }
-        savedText.value += realtimeOutput.value; // テキストを移動
-        realtimeOutput.value = ''; // リアルタイム音声出力をクリア
-        finalTranscript = ''; // 最終結果をリセット
+        moveTextToSavedText();
     }
+
+    // Save the current content to localStorage
+    saveToLocalStorage();
 };
 
+// リアルタイムのテキストをsavedTextに移動する関数
+function moveTextToSavedText() {
+    if (savedText.value.length > 0) {
+        savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
+    }
+    savedText.value += realtimeOutput.value; // テキストを移動
+    realtimeOutput.value = ''; // リアルタイム音声出力をクリア
+    finalTranscript = ''; // 最終結果をリセット
+
+    // Save the current content to localStorage
+    saveToLocalStorage();
+}
 
 recognition.onerror = function(event) {
     console.error('音声認識エラー: ' + event.error);
@@ -61,16 +69,8 @@ startBtn.addEventListener('click', function() {
 stopBtn.addEventListener('click', function() {
     recognition.isRecognizing = false;
     recognition.stop();
-
-    if (savedText.value.length > 0) {
-        savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
-    }
-    savedText.value += realtimeOutput.value;// テキストを移動
-    realtimeOutput.value = '';// リアルタイム音声出力をクリア
-    finalTranscript = '';// 最終結果をリセット
+    moveTextToSavedText();
 });
-
-recognition.isRecognizing = false;
 
 // コピーして過去の内容に移動する関数
 function copyAndMoveText() {
@@ -97,7 +97,6 @@ function saveToLocalStorage() {
     localStorage.setItem('realtimeOutput', document.getElementById('realtime-output').value);
     localStorage.setItem('savedText', document.getElementById('saved-text').value);
     localStorage.setItem('pastContents', document.getElementById('past-contents').value);
-    localStorage.setItem('summaryResult', document.getElementById('summary-result').value);
 }
 
 // リセットボタンのクリックイベントハンドラ
@@ -165,11 +164,4 @@ window.addEventListener('load', function(){
     textareas.forEach(function(textarea) {
         textarea.disabled = false;
     });
-}); // ここでコメントを終了させる
-
-
-
-
-
-
-
+});
