@@ -28,53 +28,41 @@
     </section>
 
     <section id="profile">
-      <h2>プロフィール</h2>
-      <article>
-          <div class="heading-21">
-              <h1>プロフィール情報</h1>
-          </div>
-          <div class="fb-page" 
-               data-href="https://www.facebook.com/profile.php?id=100091934651977"
-               data-tabs="timeline"
-               data-width="500"
-               data-height=""
-               data-small-header="false"
-               data-adapt-container-width="true"
-               data-hide-cover="false"
-               data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/profile.php?id=100091934651977" class="fb-xfbml-parse-ignore">
-                  <a href="https://www.facebook.com/profile.php?id=100091934651977">Facebookプロフィール</a>
-              </blockquote>
-          </div>
-      </article>
-  </section>
+        <h2>プロフィール</h2>
+        <article>
+            <div class="heading-21">
+                <h1>プロフィール情報</h1>
+            </div>
+            <iframe src="https://www.facebook.com/profile.php?id=100091934651977" width="500" height="600" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        </article>
+    </section>
 
-  <div class="back-to-top" onclick="scrollToTop()"><span>&#9650;ページトップへ</div>
-  <script>
-      function scrollToTop() {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+    <div class="back-to-top" onclick="scrollToTop()"><span>&#9650;ページトップへ</div>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-      window.fbAsyncInit = function() {
-          FB.init({
-              appId      : 'YOUR_APP_ID',
-              xfbml      : true,
-              version    : 'v9.0'
-          });
-          FB.AppEvents.logPageView();   
-      };
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '{2126438244391102}',
+                xfbml      : true,
+                version    : 'v20.0'
+            });
+            FB.AppEvents.logPageView();   
+        };
 
-      (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "https://connect.facebook.net/ja_JP/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  </script>
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/ja_JP/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-  <footer>
-      <p>&copy; Your Name. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
