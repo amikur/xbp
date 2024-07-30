@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生団体SEAds</title>
+    <link rel="stylesheet" href="./doyolab.css/SEAds.css">
+    <link rel="shortcut icon" href="./images/xbp.ico">
+</head>
+<body>
+    <header>
+        <logotohome>
+            <a href="../index.html"><img src="images/0_XBlogo.png" alt="ロゴ"></a>
+        </logotohome>
+        <h1>学生団体SEAds</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#overview">概要</a></li>
+                <li><a href="#posts">投稿</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="overview">
+        <h2>概要</h2>
+        <p>このページでは、指定されたFacebookのプロフィールを表示します。</p>
+    </section>
+
+    <section id="profile">
+      <h2>プロフィール</h2>
+      <article>
+          <div class="heading-21">
+              <h1>プロフィール情報</h1>
+          </div>
+          <div class="fb-page" 
+               data-href="https://www.facebook.com/profile.php?id=100091934651977"
+               data-tabs="timeline"
+               data-width="500"
+               data-height=""
+               data-small-header="false"
+               data-adapt-container-width="true"
+               data-hide-cover="false"
+               data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/profile.php?id=100091934651977" class="fb-xfbml-parse-ignore">
+                  <a href="https://www.facebook.com/profile.php?id=100091934651977">Facebookプロフィール</a>
+              </blockquote>
+          </div>
+      </article>
+  </section>
+
+  <div class="back-to-top" onclick="scrollToTop()"><span>&#9650;ページトップへ</div>
+  <script>
+      function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      window.fbAsyncInit = function() {
+          FB.init({
+              appId      : 'YOUR_APP_ID',
+              xfbml      : true,
+              version    : 'v9.0'
+          });
+          FB.AppEvents.logPageView();   
+      };
+
+      (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "https://connect.facebook.net/ja_JP/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <footer>
+      <p>&copy; Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
