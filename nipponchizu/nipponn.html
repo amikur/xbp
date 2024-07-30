@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>日本地図</title>
-  <link rel="stylesheet" href="nippon.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本の観光名所</title>
+    <link rel="stylesheet" href="nippon.css">
 </head>
 <body>
-  <div class="map-container">
-    <svg id="japan-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <!-- 各都道府県のパスデータをここに追加します -->
-      <path id="tokyo" d="M275.5,255.6l3.1,2.7l2.7,1.4l1.7,4.6l2.1,1.1l2.3,0.8l0.9,1.5l-1.2,2.9l1.1,2.4l0.7,1.4l-3.2,1.9l-4.1,2.5
-  l-4.4-0.6l-1.8-2.7l-2.6-1.7l-2.2-1.8l-1.3-3.1l-2.5-3.4l1.8-2.9l1.4-2.2L275.5,255.6z" class="prefecture" data-name="東京"></path>
-  <!-- 北海道のパスデータ -->
-  <path id="hokkaido" d="M 254.22 57.03 L 252.85 60.44 L 253.18 62.82 L 250.14 63.46 L 249.52 66.47 L 248.49 68.29 L 248.01 70.86 L 246.53 72.3 L 247.39 73.35 L 247.31 75.92 L 244.95 77.28 L 245.18 78.61 L 246.53 80.03 L 248.15 79.89 L 249.77 78.27 L 250.4 79.23 L 252.32 79.29 L 252.84 81.49 L 252.31 83.5 L 253.83 85.36 L 253.58 86.5 L 252.5 87.11 L 252.4 89.33 L 253.72 90.87 L 255.62 90.53 L 256.66 89.6 L 257.57 90.45 L 259.47 88.83 L 258.87 86.82 L 259.83 86.32 L 261.45 87.12 L 262.83 85.95 L 262.21 83.78 L 263.13 82.98 L 264.77 84.19 L 265.33 83.18 L 264.92 81.11 L 266.22 79.55 L 267.43 79.92 L 268.07 78.55 L 269.96 79.38 L 270.94 77.77 L 272.48 78.14 L 272.89 76.97 L 274.71 76.87 L 275.75 77.54 L 276.96 76.3 L 278.24 75.93 L 279.62 74.03 L 280.71 74.71 L 281.77 72.89 L 283.84 71.55 L 283.52 69.64 L 281.55 68.79 L 279.98 68.85 L 279.47 67.54 L 280.55 66.22 L 280.04 64.28 L 279.16 62.95 L 278.26 61.66 L 276.97 61.39 L 275.99 60.11 L 274.4 60.46 L 272.45 59.58 L 271.54 58.19 L 270.14 57.84 L 268.24 56.41 L 266.27 57.08 L 265.37 55.75 L 263.72 55.43 L 262.81 53.72 L 261.43 54.05 L 259.46 53.16 L 257.84 53.5 L 256.45 52.46 L 254.92 53.22 Z" class="prefecture" data-name="北海道"></path>
-</svg>
-    </svg>
-  </div>
-  <script src="nippon.js"></script>
+    <h1>日本の観光名所</h1>
+    <div class="map-container">
+        <img src="japan-map.png" alt="日本地図" usemap="#japan-map">
+        <map name="japan-map">
+            <!-- 都道府県のエリアを設定 -->
+            <area shape="poly" coords="..." href="#北海道" alt="北海道">
+            <!-- 他の都道府県のエリアも同様に設定 -->
+        </map>
+    </div>
+    <div id="prefecture-info">
+        <!-- 都道府県の詳細情報を表示 -->
+    </div>
+    <script src="nippon.js"></script>
 </body>
 </html>
