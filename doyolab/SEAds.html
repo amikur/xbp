@@ -6,6 +6,23 @@
     <title>学生団体SEAds</title>
     <link rel="stylesheet" href="./doyolab.css/SEAds.css">
     <link rel="shortcut icon" href="./images/xbp.ico">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .container > div {
+            flex: 1;
+            margin: 10px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 500px;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,12 +45,41 @@
     </section>
 
     <section id="profile">
-        <h2>プロフィール</h2>
+        <h2>活動内容</h2>
         <article>
             <div class="heading-21">
-                <h1>プロフィール情報</h1>
+                <h1>プロフィールタイムライン</h1>
             </div>
-            <iframe src="https://www.facebook.com/profile.php?id=100091934651977" width="500" height="600" style="border:none; overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <div class="container">
+                <div>
+                    <h2>公式Facebookページ</h2>
+                    <div class="fb-page" 
+                         data-href="https://www.facebook.com/profile.php?id=61560319741849"
+                         data-tabs="timeline"
+                         data-width="500"
+                         data-height="4000"
+                         data-small-header="false"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false"
+                         data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/profile.php?id=100091934651977" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/profile.php?id=100091934651977">Facebookプロフィール</a>
+                        </blockquote>
+                    </div>
+                </div>
+                <div>
+                    <h2>個人アカウントの投稿</h2>
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D405100489231103%26id%3D100091934651977&show_text=true&width=500" width="500" height="644" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D404356432638842%26id%3D100091934651977&show_text=true&width=500" width="500" height="709" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D343367735404379%26id%3D100091934651977&show_text=true&width=500" width="500" height="669" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D257909747283512%26id%3D100091934651977&show_text=true&width=500" width="500" height="250" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D207500838991070%26id%3D100091934651977&show_text=true&width=500" width="500" height="804" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
         </article>
     </section>
 
@@ -45,9 +91,9 @@
 
         window.fbAsyncInit = function() {
             FB.init({
-                appId      : '{2126438244391102}',
+                appId      : '2126438244391102',  // ここに取得したApp IDを入力
                 xfbml      : true,
-                version    : 'v20.0'
+                version    : 'v9.0'
             });
             FB.AppEvents.logPageView();   
         };
