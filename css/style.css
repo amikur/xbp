@@ -331,6 +331,12 @@ body {
     list-style-type: none
 }
 
+.doyolab {
+  width: 300px;
+  height: 300px;
+  border-radius: 5%; /* 完全な円形にするには50%を指定します */
+  object-fit: cover; /* 画像を要素内に収める */
+}
 
 
 
