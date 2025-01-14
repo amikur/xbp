@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoom音声文字起こしサイトの紹介</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>音声文字起こし</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#intro">紹介</a></li>
+                <li><a href="#setup">セットアップ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" class="intro">
+            <h2>Zoom音声を文字起こしするためのサイト</h2>
+            <p>
+                講義やZoomミーティングの音声を簡単に文字起こしできるツールです。
+                Macユーザーの方は、以下の方法で「BlackHole」というソフトをインストールし、設定を行うことでスムーズにご利用いただけます。
+            </p>
+        </section>
+
+        <section id="setup" class="setup">
+            <h2>Macでのセットアップ</h2>
+            <ol>
+                <li>
+                    <a href="https://ovaldesign.jp/2023/09/09/blackhole/" target="_blank">BlackHole</a>をインストールしてください。
+                </li>
+                <li>
+                    Audio MIDI設定を開き、「+」ボタンを押して新しい装置を追加します。
+                </li>
+                <li>
+                    BlackHoleを選択し、音声入力・出力のデバイスとして設定します。
+                </li>
+                <li>
+                    Zoomのオーディオ設定を開き、マイクとスピーカーにBlackHoleを選択します。
+                </li>
+            </ol>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>お問い合わせ</h2>
+            <p>
+                ご不明点やサポートが必要な場合は、お気軽にお問い合わせください。
+            </p>
+            <form action="process_form.php" method="POST">
+              <input type="text" name="name" placeholder="お名前" required>
+              <input type="email" name="email" placeholder="メールアドレス" required>
+              <textarea name="message" placeholder="メッセージ" required></textarea>
+              <button type="submit">送信</button>
+          </form>          
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 音声文字起こしサイト. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

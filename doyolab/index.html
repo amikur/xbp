@@ -1,44 +1,315 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>doyolab_HP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Text</title>
     <link rel="stylesheet" href="./doyolab.css/style.css">
-    <link rel="shortcut icon" href="./images/xbp.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./particleText.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
 
 </head>
 <body>
-    <logotohome>
-    <a href="../index.html"><img src="images/0_XBlogo.png" alt=""></a>
-    </logotohome>
-    <main class="main">
-        <div class="title">        
-            <h1>道用ゼミ</h1>
-        </div>
-        <div class="contents">
-            <h2>グループプロジェクト</h2>
-                <div class="list">       
-                    <ul> 
-                         <li><a href="./withal.html"target="_blank">ーWithalー</a></li>
-                         <li><a href="./mesh.html"target="_blank">ーMESH WS設計ー</a></li>
-                         <li><a href="./kamakura.html"target="_blank">ー鎌倉プロジェクトー</a></li>   
-                    </ul>
-                </div>
-            <h2>個人活動</h2>
-            <div class="list">                  
-                    <ul>          
-                         <li><a href="./SEAds.html"target="_blank">学生団体SEAds</a></li>
-                         <li><a href="https://shibuya-qws.com/project/manabipalette.com"target="_blank">一般社団法人まなびぱれっと</a></li>
-                    </ul>
-                </div>
-        </div>
-    </main>
-<br>
-<br>
+    <!-- Particles.js Container -->
+<div id="particles-js"></div>
 
+<!-- Stats and Count Particles (Optional, for debugging) -->
+<div class="count-particles">
+    <span class="js-count-particles"></span> 
+</div>
+    <canvas id="particle-text"></canvas>
+    <canvas id="particle-text-small"></canvas>
+    <div class="scrolldown2">
+        <span>SCROLL</span>
+    </div>
+    <div class="content">
+        <div class="fade-in-section">
+            <h1>ゼミのドキュメンテーションは、計画的に。</h1>
+            <p>Slackで道用さんに催促された時にはもう遅い。<br>こまめに記録をまとめないと、結果的に痛い目に遭います。本当に。<br>スマホのメモでも構わないので、何をやったか毎回記録しましょう。<br></p>
+        </div>
+        <div class="fade-in-section">
+            <h1>Just do it.</h1>
+            <p>しっかり忠告しましたからね。<br>ちなみに僕は今、痛い目に遭っています。</p>
+        </div>
+    </div>
+    <div class="random-text-container">
+        <h1 class="random-text" data-text="Group Project"></h1>
+    </div> 
+    <div class="image-gallery">
+        <!-- Withal画像 -->
+        <div class="image-container">
+            <a href="./withal.html"target="_blank">
+                <img src="./images/withalimg.png" alt="Withal">
+            </a>
+        </div>
+        <!-- MESH画像 -->
+        <div class="image-container">
+            <a href="./mesh.html"target="_blank">
+                <img src="./images/YOKOHAMA-MESH.png" alt="MESH">
+            </a>
+        </div>
+        <!-- 鎌倉画像 -->
+        <div class="image-container">
+            <a href="./kamakura.html"target="_blank">
+                <img src="./images/KAMAKURA-img.png" alt="KAMAKURA">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="./circular.html"target="_blank">
+                <img src="./images/circular.png" alt="circular">
+            </a>
+        </div>
+    </div>
+
+    <div class="random-text-container">
+        <h1 class="random-text" data-text="Personal Project"></h1>
+    </div>
+    <div class="image-gallery">
+        <!-- SEAds画像 -->
+        <div class="image-container">
+            <a href="./SEAds.html"target="_blank">
+                <img src="./images/SEAds.png" alt="SEAds">
+            </a>
+        </div>
+        <!-- まなびぱれっと画像 -->
+        <div class="image-container">
+            <a href="https://shibuya-qws.com/project/manabipalette.com"target="_blank">
+                <img src="./images/3d51d80217e9d745b7d3073a64e65c24-76f50dc79ecf7246dce09df26a63a2d8.jpeg" alt="manabipalette">
+            </a>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 KOKI AMIKURA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        $(document).ready(function () {
+    $("#particle-text").particleText({
+        text: "Doyo Lab",
+        colors: ["#FF5733", "#33CFFF", "#FF33D4"],
+        speed: "middle"
+    });
+    // KOKI AMIKURA のパーティクル
+    $("#particle-text-small").particleText({
+        text: "15th　KOKI AMIKURA ",
+        colors: ["#1E90FF", "#5F9EA0", "#00FFFF"],
+        speed: "middle"
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeInSections = document.querySelectorAll(".fade-in-section");
+
+    const observerOptions = {
+        root: null, // ビューポートを基準
+        threshold: 0.1, // 10%見えたら実行
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target); // 一度表示されたら監視を停止
+            }
+        });
+    }, observerOptions);
+
+    fadeInSections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const randomTextElements = document.querySelectorAll(".random-text"); // 全ての .random-text を取得
+
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    randomTextElements.forEach((randomTextElement) => {
+        const targetText = randomTextElement.dataset.text; // data-text 属性からテキストを取得
+        let currentText = "";
+        let iteration = 0;
+
+        // ランダムなテキストアニメーションを開始する関数
+        function randomizeText() {
+            currentText = targetText
+                .split("")
+                .map((char, index) => {
+                    if (index < iteration) {
+                        return char; // 確定文字
+                    }
+                    return characters[Math.floor(Math.random() * characters.length)]; // ランダム文字
+                })
+                .join("");
+
+            randomTextElement.textContent = currentText;
+
+            if (iteration < targetText.length) {
+                iteration++;
+                setTimeout(randomizeText, 100); // 次の文字への遅延
+            }
+        }
+
+        // IntersectionObserverを設定
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    randomTextElement.classList.add("is-visible"); // フェードイン
+                    randomizeText(); // アニメーションを開始
+                    observer.unobserve(randomTextElement); // 一度だけ実行
+                }
+            });
+        });
+
+        observer.observe(randomTextElement); // 各要素を監視
+    });
+});
+
+
+ // グループプロジェクト画像
+$(document).ready(function () {
+    // .image-gallery がビューポートに入ったらクラスを追加
+    $(".image-gallery").on("inview", function (event, isInView) {
+        if (isInView) {
+            $(this).addClass("in-view");
+        }
+    });
+});
+ // グループプロジェクト画像ここまで
+
+particlesJS("particles-js", {
+    particles: {
+        number: {
+            value: 80,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+        },
+        color: {
+            value: "#727272"
+        },
+        shape: {
+            type: "edge",
+            stroke: {
+                width: 0,
+                color: "#000000"
+            },
+            polygon: {
+                nb_sides: 5
+            }
+        },
+        opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false
+            }
+        },
+        size: {
+            value: 3,
+            random: true,
+            anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false
+            }
+        },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+            }
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse"
+            },
+            onclick: {
+                enable: true,
+                mode: "push"
+            },
+            resize: true
+        },
+        modes: {
+            grab: {
+                distance: 400,
+                line_linked: {
+                    opacity: 1
+                }
+            },
+            bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 4
+            },
+            remove: {
+                particles_nb: 2
+            }
+        }
+    },
+    retina_detect: true
+});
+
+// Stats.js for particle count (optional)
+var count_particles, stats, update;
+stats = new Stats();
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function () {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+
+
+    </script>
 
 </body>
 </html>

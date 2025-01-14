@@ -1,92 +1,268 @@
-@charset "utf-8";
-/* 冒頭でimport */
-@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
-/* フォントを指定したいところで */
-
-logo img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* 画像のトリミング */
-}
-
-logotohome img{
-    border-radius: 70%;
-    width: 70px;
-    height: 70px;
-    object-fit: cover; /* 画像のトリミング */
-}
-
-
-
-/* ========== common ========== */
+/* 全体設定 */
 body {
-    margin: 0px;
-    padding: 0px;
-    background-color: rgba(241, 221, 176, 0.363);
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll; /* スクロールを有効に */
+    height: 200vh; /* ページ全体の高さを設定 */
 }
 
-.title {
-    height: 310px;
-    background-image: url(../images/DALL·E\ 2024-04-08\ 11.19.10\ -\ In\ a\ spacious\ workshop\ filled\ with\ sunlight\,\ a\ cheerful\ Asian\ man\ in\ his\ 40s\ with\ a\ round\ face\,\ slightly\ thinning\ hair\,\ and\ glasses\ is\ joyfully\ intera.webp);
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* Particles.js Container */
+#particles-js {
+    position: absolute;
+    bottom: 0; /* 最下部に配置 */
+    width: 100%;
+    height: 100vh; /* 必要に応じて高さを調整 */
+    background-color: #000000; /* 背景色 */
+    background-image: url(""); /* 背景画像を設定する場合 */
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-shadow: 1px 1px 10px #4b2c14;
+    background-position: 50% 50%;
 }
 
-.title h1 {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    font-size: 60px;
+/* Stats.js */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
-
-
-.contents {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    padding-top: 80px;
-    font-size: 20px;
-    text-align: center;
-    
+.js-count-particles {
+    font-size: 1.1em;
 }
 
-.contents h2::after {
-    content: '';
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
+
+/* DOYO LAB 用キャンバス */
+#particle-text {
     display: block;
-    width: 50px;
-    height: 3px;
-    background-color: black;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: 50vh; /* 高さを半画面に */
+    position: absolute;
+    top: 25vh; /* 画面の中央に配置 */
+    left: 0;
+    transform: translateY(0); /* 必要なら中央補正 */
+}
+
+/* KOKI AMIKURA 用キャンバス */
+#particle-text-small {
+    display: block;
+    width: 50%; /* 幅を50% */
+    height: 15vh; /* 高さを小さく調整 */
+    position: absolute;
+    top: 75vh; /* DOYO LAB の下に配置 */
+    left: 50%; /* 左端を中央に設定 */
+    transform: translateX(-50%); /* 完全中央寄せ */
+}
+
+
+/* コンテンツエリア */
+.content {
+    position: relative;
+    margin-top: 150vh; /* KOKI AMIKURA の下に表示 */
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/*=== スクロールを促すアニメーション ===*/
+
+/* スクロールダウン全体の場所 */
+.scrolldown2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Scrollテキストの描写 */
+.scrolldown2 span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+    animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+
+/* 丸の動き: 上から下に */
+@keyframes circlemove {
+    0% {
+        bottom: 45px;
+    }
+    100% {
+        bottom: -5px;
+    }
+}
+
+/* 丸の透過アニメーション */
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 線の描写 */
+.scrolldown2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 50px;
+    background: #eee;
+}
+
+/* フェードインアニメーションの基本スタイル */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, transform;
+    letter-spacing: 2px;
+    line-height: 65px;
+}
+
+/* 表示された状態 */
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ランダムテキストのスタイル */
+.random-text-container {
+    top: 20px; /* ページ上部からの距離 */
+    left: 20px; /* ページ左からの距離 */
+    text-align: left;
+}
+
+.random-text,random-text-personal-text {
+    font-size: 6rem; /* フォントサイズを大きく設定 */
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 0.2em; /* 文字間隔を広げる */
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0; /* 初期状態で非表示 */
+    transition: opacity 0.5s ease-in; /* フェードイン効果 */
+    padding-top: 350px;
+    padding-left: 100px;
+}
+
+.random-text.is-visible {
+    opacity: 1; /* 表示された状態 */
+}
+/* テキストコンテナの調整 */
+.random-text-container {
+    margin-bottom: 100px; /* 画像と文字の間に十分な余白を追加 */
+    text-align: left;
 }
 
 
 
 
- ul, ol {
-    background: #fffcf4;
-    border-radius :8px;/*角の丸み*/
-    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
-    padding: 0.5em 0.5em 0.5em 2em;
-    
-  }
- ul li, ol li {
-    line-height: 0.5;
-    padding: 0.5em 0;
-    
-    }
 
-  .list {
+/* 画像ギャラリーのスタイル */
+.image-gallery {
     display: flex;
-    justify-content: center;
-   font-size: 25px;
-    
-  }
-  
+    flex-direction: column; /* 縦方向に並べる */
+    align-items: center; /* 画像を中央揃え */
+    gap: 200px; /* 画像の間にスペースを追加 */
+    margin-top: 50px; /* 全体の上部余白 */
+    margin-bottom: 100px;
+}
+
+/* 画像コンテナのスタイル */
+.image-container img {
+    max-width: 800px; /* 幅を最大800pxに制限 */
+    width: 100%; /* ページ幅に合わせてサイズ調整 */
+    height: auto; /* アスペクト比を維持 */
+    border-radius: 15px; /* 角を丸くする */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* 影を追加 */
+}
+
+/* Personal Projectのスタイル */
+.personal-text {
+    font-size: 3rem; /* フォントサイズを調整 */
+    font-weight: bold; /* 太字に設定 */
+    color: #FFFFFF; /* 白色に設定 */
+    text-align: left; /* 左揃え */
+    margin: 20px 0 0 20px; /* 上部と左に余白を追加 */
+    letter-spacing: 0.1em; /* 文字間隔を少し広げる */
+}
+
+
+/* フッター全体 */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* 著作権情報 */
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
