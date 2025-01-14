@@ -9,8 +9,7 @@ body {
 }
 
 canvas {
-    display: block;
-    vertical-align: bottom;
+    display: block;   
 }
 /* Particles.js Container */
 /* Particles.js Container */
@@ -49,7 +48,6 @@ canvas {
 
 #stats,
 .count-particles {
-    -webkit-user-select: none;
     margin-top: 5px;
     margin-left: 5px;
 }
