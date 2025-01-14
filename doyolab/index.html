@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const observerOptions = {
         root: null, // ビューポートを基準
-        threshold: 0.1, // 10%見えたら実行
+        threshold: 0.5, // 50%見えたら実行
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -156,19 +156,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // IntersectionObserverを設定
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    randomTextElement.classList.add("is-visible"); // フェードイン
-                    randomizeText(); // アニメーションを開始
-                    observer.unobserve(randomTextElement); // 一度だけ実行
-                }
-            });
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        randomTextElement.classList.add("is-visible"); // フェードイン
+                        randomizeText(); // アニメーションを開始
+                        observer.unobserve(randomTextElement); // 一度だけ実行
+                    }
+                });
+            },
+            {
+                root: null, // ビューポートを基準
+                rootMargin: "0px", // マージンを指定しない
+                threshold: 0.5, // 要素が50%表示された時に発火
+            }
+        );
 
         observer.observe(randomTextElement); // 各要素を監視
     });
 });
+
 
 
  // グループプロジェクト画像
