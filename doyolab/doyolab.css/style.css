@@ -210,6 +210,16 @@ canvas {
 .random-text.is-visible {
     opacity: 1; /* 表示された状態 */
 }
+
+/* モバイル対応: ランダムテキストのサイズ調整 */
+@media screen and (max-width: 600px) {
+    .random-text, .random-text-personal-text {
+        font-size: 2.5rem; /* フォントサイズを小さく調整 */
+        padding-top: 50px; /* 余白を調整 */
+        padding-left: 20px; /* 左側の余白を調整 */
+        line-height: 1.2; /* 行間を狭く */
+    }
+}
 /* テキストコンテナの調整 */
 .random-text-container {
     margin-bottom: 100px; /* 画像と文字の間に十分な余白を追加 */
@@ -248,7 +258,13 @@ canvas {
     margin: 20px 0 0 20px; /* 上部と左に余白を追加 */
     letter-spacing: 0.1em; /* 文字間隔を少し広げる */
 }
-
+/* モバイル対応: Personal Projectのサイズ調整 */
+@media screen and (max-width: 600px) {
+    .personal-text {
+        font-size: 2rem; /* フォントサイズを小さく調整 */
+        margin: 10px 0 0 10px; /* 余白を調整 */
+    }
+}
 
 /* フッター全体 */
 .site-footer {
