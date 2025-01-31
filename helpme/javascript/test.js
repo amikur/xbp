@@ -3,6 +3,7 @@ const stopBtn = document.getElementById('stop-btn');
 const resetBtn = document.getElementById('reset-btn');
 const copyBtn = document.getElementById('copy-btn');
 const gotoNameManagementBtn = document.getElementById('goto-name-management-btn');
+const langToggleBtn = document.getElementById('lang-toggle-btn'); // 言語切り替えボタン
 const realtimeOutput = document.getElementById('realtime-output');
 const savedText = document.getElementById('saved-text');
 const pastContents = document.getElementById('past-contents');
@@ -12,26 +13,52 @@ const recognition = new speechRecognition();
 
 recognition.continuous = true;
 recognition.interimResults = true;
-recognition.lang = 'ja-JP';
+recognition.lang = localStorage.getItem('speechLang') || 'ja-JP'; // 言語の保存・復元
 
 let finalTranscript = '';
 
 // ローカルストレージからnameMapを取得
 const nameMap = new Map(JSON.parse(localStorage.getItem('nameMap')) || []);
-console.log('Loaded nameMap:', nameMap); // nameMapの内容をコンソールにログ出力
+console.log('Loaded nameMap:', nameMap);
 
-recognition.onresult = function(event) {
+// 言語切り替え機能
+langToggleBtn.addEventListener('click', function () {
+    if (recognition.lang === 'ja-JP') {
+        recognition.lang = 'en-US';
+        localStorage.setItem('speechLang', 'en-US');
+        langToggleBtn.textContent = 'Switch to Japanese';
+    } else {
+        recognition.lang = 'ja-JP';
+        localStorage.setItem('speechLang', 'ja-JP');
+        langToggleBtn.textContent = '日本語に切り替え';
+    }
+    alert(`Language changed to: ${recognition.lang}`);
+});
+
+recognition.onresult = function (event) {
     let interimTranscript = '';
 
     for (let i = event.resultIndex; i < event.results.length; ++i) {
         let transcript = event.results[i][0].transcript;
 
-        // 固有名詞の置き換え
-        nameMap.forEach((displayName, pronunciation) => {
-            // 正規表現で大文字小文字を区別せずに置き換える
-            const regex = new RegExp(pronunciation, 'gi');
-            transcript = transcript.replace(regex, displayName);
+        console.log('Original transcript:', transcript);
+
+        // 各単語に対して置き換えを行う
+        let words = transcript.split(' ');
+        words = words.map(word => {
+            nameMap.forEach((displayName, pronunciation) => {
+                const regex = new RegExp(pronunciation, 'gi');
+                if (regex.test(word)) {
+                    console.log('Applying regex:', regex);
+                    word = word.replace(regex, displayName);
+                }
+            });
+            return word;
         });
+
+        transcript = words.join(' ');
+
+        console.log('Replaced transcript:', transcript);
 
         if (event.results[i].isFinal) {
             finalTranscript += transcript + ' ';
@@ -39,73 +66,70 @@ recognition.onresult = function(event) {
             interimTranscript += transcript;
         }
     }
-    
+
+    console.log('Final transcript:', finalTranscript);
+    console.log('Interim transcript:', interimTranscript);
+
     realtimeOutput.value = finalTranscript + interimTranscript;
 
-    // Save the current content to localStorage
     saveToLocalStorage();
 
-    // 2000文字を超えたらsavedTextに移動
     if (realtimeOutput.value.length >= 2000) {
         if (savedText.value.length > 0) {
-            savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
+            savedText.value += 'xxxxxxxxxxxx\n';
         }
-        savedText.value += realtimeOutput.value; // テキストを移動
-        realtimeOutput.value = ''; // リアルタイム音声出力をクリア
-        finalTranscript = ''; // 最終結果をリセット
+        savedText.value += realtimeOutput.value;
+        realtimeOutput.value = '';
+        finalTranscript = '';
     }
 };
 
-recognition.onerror = function(event) {
-    console.error('音声認識エラー: ' + event.error);
+recognition.onerror = function (event) {
+    console.error('Speech recognition error: ' + event.error);
 };
 
-recognition.onend = function() {
+recognition.onend = function () {
     if (recognition.isRecognizing) {
         recognition.start();
     }
 };
 
-startBtn.addEventListener('click', function() {
+startBtn.addEventListener('click', function () {
     recognition.isRecognizing = true;
     finalTranscript = '';
     realtimeOutput.value = '';
     recognition.start();
 });
 
-stopBtn.addEventListener('click', function() {
+stopBtn.addEventListener('click', function () {
     recognition.isRecognizing = false;
     recognition.stop();
 
     if (savedText.value.length > 0) {
-        savedText.value += 'xxxxxxxxxxxx\n'; // 既存のテキストと新しいテキストの間に区切りを追加
+        savedText.value += 'xxxxxxxxxxxx\n';
     }
-    savedText.value += realtimeOutput.value; // テキストを移動
-    realtimeOutput.value = ''; // リアルタイム音声出力をクリア
-    finalTranscript = ''; // 最終結果をリセット
+    savedText.value += realtimeOutput.value;
+    realtimeOutput.value = '';
+    finalTranscript = '';
 });
 
 recognition.isRecognizing = false;
 
 copyBtn.addEventListener('click', copyAndMoveText);
-gotoNameManagementBtn.addEventListener('click', function() {
-    window.location.href = 'name-management.html'; // 固有名詞登録ページへのリンク
+gotoNameManagementBtn.addEventListener('click', function () {
+    window.location.href = 'name-management.html';
 });
 
-// コピーして過去の内容に移動する関数
 function copyAndMoveText() {
-    // クリップボードにコピー
     navigator.clipboard.writeText(savedText.value).then(() => {
-        // コピー成功時に過去の内容にテキストを移動
-        pastContents.value += savedText.value + "\n"; // 既存のテキストに新しいテキストを追加
-        savedText.value = ''; // 元のテキストボックスをクリア
-        alert('テキストが過去の内容に移動されました。');
+        pastContents.value += savedText.value + "\n";
+        savedText.value = '';
+        alert(recognition.lang === 'ja-JP' ? 'テキストが過去の内容に移動されました。' : 'Text has been moved to past contents.');
     }).catch(err => {
-        console.error('コピーに失敗しました: ', err);
+        console.error('Failed to copy: ', err);
     });
 }
 
-// テキストボックスの内容をlocalStorageに保存する関数
 function saveToLocalStorage() {
     localStorage.setItem('realtimeOutput', realtimeOutput.value);
     localStorage.setItem('savedText', savedText.value);
@@ -113,28 +137,25 @@ function saveToLocalStorage() {
 }
 
 resetBtn.addEventListener('click', () => {
-    if (confirm('全てのテキストボックスの内容をリセットしますか？')) {
-        // localStorageからも削除
+    if (confirm(recognition.lang === 'ja-JP' ? '全てのテキストボックスの内容をリセットしますか？' : 'Do you want to reset all text boxes?')) {
         localStorage.removeItem('realtimeOutput');
         localStorage.removeItem('savedText');
         localStorage.removeItem('pastContents');
 
-        // 全てのテキストボックスをクリア
         realtimeOutput.value = '';
         savedText.value = '';
         pastContents.value = '';
     }
 });
 
-// テキストボックスの内容が変更されたときにlocalStorageに保存
 realtimeOutput.addEventListener('input', saveToLocalStorage);
 savedText.addEventListener('input', saveToLocalStorage);
 pastContents.addEventListener('input', saveToLocalStorage);
 
-// ページ読み込み時に実行する関数を追加
-window.addEventListener('load', function() {
-    // 既存のlocalStorageのデータを復元
+window.addEventListener('load', function () {
     realtimeOutput.value = localStorage.getItem('realtimeOutput') || '';
     savedText.value = localStorage.getItem('savedText') || '';
     pastContents.value = localStorage.getItem('pastContents') || '';
+
+    langToggleBtn.textContent = recognition.lang === 'ja-JP' ? 'Englishに切り替え' : 'Switch to Japanese';
 });

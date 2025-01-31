@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>リアルタイム文字起こし</title>
+    <link rel="stylesheet" href="./css/chstyle.css">
+    <link rel="icon" href="./images/seadsicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="button-container">
+    <button id="start-btn" data-lang-ja="音声認識を開始" data-lang-en="Start Speech Recognition">音声認識を開始</button>
+    <button id="stop-btn" data-lang-ja="音声認識を停止" data-lang-en="Stop Speech Recognition">音声認識を停止</button>
+    <button id="reset-btn" data-lang-ja="リセット" data-lang-en="Reset">リセット</button>
+    <button id="goto-name-management-btn" class="button-differentiated" data-lang-ja="固有名詞登録ページへ" data-lang-en="Go to Name Registration">固有名詞登録ページへ</button>
+    <button id="lang-toggle-btn">Englishに切り替え</button> <!-- 言語切り替えボタン -->
+</div>
+
+<div class="textareas-container">
+    <div class="left-container">
+        <h4 id="realtime-title" data-lang-ja="リアルタイム文字起こし" data-lang-en="Real-time Transcription">リアルタイム文字起こし</h4>
+        <textarea id="realtime-output" rows="20" disabled></textarea>
+    </div>
+
+    <div class="right-container">
+        <h4 id="saved-text-title" data-lang-ja="要約待ちのテキスト" data-lang-en="Text Waiting for Summary">要約待ちのテキスト</h4>
+        <textarea id="saved-text" rows="20"></textarea>
+    </div>
+</div>
+
+<div id="copy-btn-container">
+    <button id="copy-btn" data-lang-ja="テキストをコピーして<br>過去の内容に移動" data-lang-en="Copy Text and Move to Past">テキストをコピーして<br>過去の内容に移動</button>
+</div>
+
+<div class="past-container">
+    <p id="past-contents-title" data-lang-ja="過去の内容（コピーされたテキストは全てこのテキストボックスに移動します）"
+       data-lang-en="Past Contents (All copied text moves here)">
+        過去の内容（コピーされたテキストは全てこのテキストボックスに移動します）
+    </p>
+    <textarea id="past-contents" rows="15"></textarea>
+</div>
+
+<script src="./javascript/test.js"></script>
+<script>
