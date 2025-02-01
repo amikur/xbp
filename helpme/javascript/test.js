@@ -30,7 +30,7 @@ langToggleBtn.addEventListener('click', function () {
     } else {
         recognition.lang = 'ja-JP';
         localStorage.setItem('speechLang', 'ja-JP');
-        langToggleBtn.textContent = '日本語に切り替え';
+        langToggleBtn.textContent = '英語に切り替え';
     }
     alert(`Language changed to: ${recognition.lang}`);
 });
