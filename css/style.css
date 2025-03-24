@@ -571,7 +571,7 @@ margin-right: auto;
   z-index: 1;
 }
 
-/* ホバー時にグレーのフィルターをかける */
+/* ホバー時にグレーのフィルターをかけ */
 .item-list img:hover {
   filter: brightness(80%);
   cursor: pointer;
