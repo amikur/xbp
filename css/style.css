@@ -564,3 +564,16 @@ margin-right: auto;
   max-width: 100px; /* 画像の最大幅 */
   max-height: 50px; 
 }
+/* 画像の共通スタイル */
+.item-list img {
+  transition: 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* ホバー時にグレーのフィルターをかける */
+.item-list img:hover {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
