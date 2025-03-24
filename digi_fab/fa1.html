@@ -1,157 +1,124 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
-    <title>あみくら　ピンセット</title>
-
-    <link rel="stylesheet" href="./css.homework/style.css">
-
+  <meta charset="UTF-8">
+  <title>音のなるピンセット</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #f1cc44;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 1em;
+      background: white;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+    a {
+      color: rgb(71, 153, 68);
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin: 10px 0;
+    }
+    .note {
+      font-style: italic;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-    <header class="header-de12">
-        <div class="header-text">
-            <h1>【ピンセットを進化させよう】 ~音のなるピンセット~</h1>
-        </div>
-    </header>
-  
-    <div class="main-digi">
-        <div class="boutou">
-            <h2>おはようございます。<br>今回は、金曜2限デジタルファブリケーションの課題であります、<br>
-            3Dプリントを用いてピンセットを進化させるといった内容となっております。</h2>
-        </div>
+  <header>
+    <h1>【ピンセットを進化させよう】 ~音のなるピンセット~</h1>
+  </header>
+  <main>
+    <h2>おはようございます。<br>今回は、金曜2限デジタルファブリケーションの課題であります、<br>3Dプリントを用いてピンセットを進化させるといった内容となっております。</h2>
 
-        <div class="title">
-            <h1>1.制作テーマ決定までのストーリー</h1>
-        </div>
+    <h1>1.制作テーマ決定までのストーリー</h1>
+    <h2>制作開始当初は、手足が十分に動かせない方が、<br>口でくわえて使えるピンセットを作ろう！<br>と、考えていました。</h2>
+    <h2>ストーリーボードは、こんな感じ。</h2>
+    <img src="./images/IMG_9485.jpg">
+    <div>いや、ムズすぎる。</div>
+    <h3>3DCADを初めて触る私にとって、一番最初にやるべきではないと思いました。</h3>
+    <h2>じゃあ、これからどうしようかと考えたときに、</h2>
+    <h1>勉強しよう。</h1>
+    <h2>そう思いました。</h2>
+    <h2>そこで新たに考えられたピンセット案がこちら</h2>
+    <img src="./images/IMG_9484.jpg">
+    <h2>当たり障りのない、ただただ勉強する為だけに考えられたピンセット。<br>しかしながら、この試作品が、後々大きな役割を果たしてくれます。</h2>
 
-        <div>
-            <h2>制作開始当初は、手足が十分に動かせない方が、<br>口でくわえて使えるピンセットを作ろう！<br>
-            と、考えていました。</h2>
-        </div>
-        <div>
-            <h2>ストーリーボードは、こんな感じ。</h2>
-            <img src="./images/IMG_9485.jpg">
-        </div>
-       <div class="so-difficult">
-        いや、ムズすぎる。
-       </div>
+    <h1>2.試作品からの着想</h1>
+    <h2>とりあえず作ってみた物がこれ</h2>
+    <img src="./images/IMG_9473.jpg">
+    <h3>落書きする前の画像がありませんでした。申し訳ございません。</h3>
+    <a href="./pin.stl">stlファイル</a>
+    <h2>出来上がって、しばらく作品を眺めていると、あることを思いつきます。</h2>
+    <h2>顔の部分、何かに似ていませんか？<br>そうです、フエラムネに似ていますね。</h2>
+    <img src="./images/616wkCw7-UL._AC_SX679_.jpg">
+    出典:<a href="https://www.amazon.co.jp/%E3%82%B3%E3%83%AA%E3%82%B9-%E3%83%95%E3%82%A8%E3%83%A9%E3%83%A0%E3%83%8D-8%E5%80%8B%C3%9720%E8%A2%8B/dp/B0015XMZ6S" target="_blank">amazon コリス　フエラムネ8個×20袋</a>
+    <h1>ここで、ピンセットに笛がついていたら、面白そう！<br>と思い立った訳です。</h1>
 
-       <div>
-        <h2>少しFusion360で試作してみたものの、<br>目処が立つ気がしませんでした。<br>即座にボツになりました。</h2>
-       </div>
+    <h1>3.笛付きピンセットができるまで</h1>
+    <h2>そうと決まれば、早速取り掛かることにしましょう</h2>
+    <h2>そもそも、なぜフエラムネは音が鳴るのでしょうか。<br>仕組みは至ってシンプル。</h2>
+    <img src="./images/IMG_9486.jpg">
+    <img src="./images/IMG_9488.jpg">
+    <h2>息を吹き込むと、ラムネ内の空洞で空気による振動が起き、音が鳴る仕組み。<br>原理としては、風が吹いている日に、窓を少し開けると音が鳴ったり、<br>縄跳びを跳んでいる時やラケットを振ったときに音が鳴ったりするのと同じです。</h2>
+    詳しくはコチラ→<a href="http://web.kyoto-inet.or.jp/people/ebisan/huegum.htm" target="_blank">フエガムもどき笛 - kyoto-Inet</a><br>
+    <a href="https://kotobank.jp/word/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E6%B8%A6-468277" target="_blank">カルマン渦とは - コトバンク</a>
 
-       <div>
-        <h2>じゃあ、これからどうしようかと考えたときに、</h2>
-       </div>
-       <div class="study">
-        勉強しよう。
-       </div>
-       <div>
-        <h2>そう思いました。</h2>
-       </div>
-       <div>
-        <h2>そこで新たに考えられたピンセット案がこちら</h2>
-        <img src="./images/IMG_9484.jpg">
-       </div>
-       <div>
-        <h2>当たり障りのない、ただただ勉強する為だけに考えられたピンセット。<br>しかしながら、この試作品が、後々大きな役割を果たしてくれます。</h2>
-       </div>
+    <h2>仕組みが分かったら、次はモデリングです。<br>出来上がった物がコチラ</h2>
+    <img src="./images/スクリーンショット2022-10-15 134446.png"><br>
+    <a href="./fueramune2.stl">stlファイル</a>
+    <h2>これを２つプリントし、上下逆さにくっつけて空洞を作ろうと考えました。</h2>
+    参考にしたサイト→<a href="https://forums.autodesk.com/t5/fusion-360-ri-ben-yu/ping-mianni-duisurukubomi-dinpuru/td-p/7121074">平面に対するくぼみ（ディンプル） - Autodesk Community</a>
 
-       <div class="title2">
-        <h1>2.試作品からの着想</h1>
-       </div>
+    <h2>プリントしたものがこれ</h2>
+    <img src="./images/IMG_9471.jpg">
+    <h2>良い感じです。</h2>
+    <h2>これらを接着します</h2>
+    <img src="./images/IMG_9477 (1).jpg">
+    <h2>若干見づらいですが、中に空洞ができました。</h2>
 
-       <div>
-        <h2>とりあえず作ってみた物がこれ</h2>
-        <img src="./images/IMG_9473.jpg">
-        <h3>落書きする前の画像がありませんでした。申し訳ございません。</h3>
-        <a href="./pin.stl">stlファイル</a>
-       </div>
+    <h2>実際に吹いてみます</h2>
+    <iframe src="https://www.youtube.com/embed/zCiG2csf22A" allowfullscreen></iframe>
+    <h2>音が鳴りました。構造は問題ないようですね。<br>しかし、音量は70dB後半といったところ。<br>もう少し音が大きくなるものを作ろうと思います。</h2>
 
-       <div>
-        <h2>出来上がって、しばらく作品を眺めていると、あることを思いつきます。</h2>
-       </div>
-       <div>
-        <h2>顔の部分、何かに似ていませんか？<br>そうです、フエラムネに似ていますね。</h2>
-        <img src="./images/616wkCw7-UL._AC_SX679_.jpg">
-        出典:<a href="https://www.amazon.co.jp/%E3%82%B3%E3%83%AA%E3%82%B9-%E3%83%95%E3%82%A8%E3%83%A9%E3%83%A0%E3%83%8D-8%E5%80%8B%C3%9720%E8%A2%8B/dp/B0015XMZ6S"target="_blank">amazon コリス　フエラムネ8個×20袋</a>
-       </div>
+    <h2>出来ました</h2>
+    <img src="./images/2022-10-15 143034.png">
+    <img src="./images/2022-10-15 143054.png"><br>
+    <a href="./fueramune4.stl">stlファイル</a>
+    <h2>トーラスでドーナツのような形を作り、上下で分割し、下半分を消し去った後、シェルという機能で空洞化しています。<br>ほぼフエラムネの形ができました。<br>先程の作品より空洞が多くなったので、期待できそうです。</h2>
+    <h2>出来上がった物がこれ</h2>
+    <img src="./images/IMG_9489.jpg">
 
-       <div>
-        <h1>ここで、ピンセットに笛がついていたら、面白そう！<br>と思い立った訳です。</h1>
-       </div>
+    <h2>実際の動画がこちら</h2>
+    <iframe src="https://www.youtube.com/embed/B-CXNRAYD3Q" allowfullscreen></iframe>
+    <h2>80dB後半でした。約10dB上昇させる事ができました。成功です。</h2>
 
-       <div class="title2">
-        <h1>3.笛付きピンセットができるまで</h1>
-       </div>
+    <h1>4.まとめ・感想等</h1>
+    <h2>今回は、ピンセットに笛を付け、音のなるピンセットを制作しました。<br>3DCADの使い方や3Dプリンターの機能など、手こずるところもありましたが、<br>最終的には形になって一安心です。<br>今回習得した事を、今後更に活かせるよう、精進いたします。<br>少々長くなってしまいましたが、ご覧下さりありがとうございました。</h2>
 
-       <div>
-        <h2>そうと決まれば、早速取り掛かることにしましょう</h2>
-        </div>
-        <div>
-            <h2>そもそも、なぜフエラムネは音が鳴るのでしょうか。<br>仕組みは至ってシンプル。</h2>
-            <div class="fueramune2">
-            <img src="./images/IMG_9486.jpg"><img src="./images/IMG_9488.jpg">
-            </div>
-            <h2>息を吹き込むと、ラムネ内の空洞で空気による振動が起き、音が鳴る仕組み。<br>
-            原理としては、風が吹いている日に、窓を少し開けると音が鳴ったり、<br>縄跳びを跳んでいる時やラケットを振ったときに音が鳴ったりするのと同じです。</h2>
-            詳しくはコチラ→<a href="http://web.kyoto-inet.or.jp/people/ebisan/huegum.htm"target="_blank">フエガムもどき笛 - kyoto-Inet</a><br>
-            <a href="https://kotobank.jp/word/%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E6%B8%A6-468277"target="_blank">カルマン渦とは - コトバンク</a>
-        
-        </div>
-
-        <div>
-           <h2>仕組みが分かったら、次はモデリングです。<br>
-        出来上がった物がコチラ</h2>
-        <img src="./images/スクリーンショット2022-10-15 134446.png"><br>
-        <a href="./fueramune2.stl">stlファイル</a>
-        <h2>これを２つプリントし、上下逆さにくっつけて空洞を作ろうと考えました。</h2>
-        参考にしたサイト→<a href="https://forums.autodesk.com/t5/fusion-360-ri-ben-yu/ping-mianni-duisurukubomi-dinpuru/td-p/7121074">平面に対するくぼみ（ディンプル） - Autodesk Community</a>
-        </div>
-        <div>
-            <h2>プリントしたものがこれ</h2>
-            <img src="./images/IMG_9471.jpg">
-            <h2>良い感じです。</h2>
-        </div>
-        <div>
-            <h2>これらを接着します</h2>
-            <img src="./images/IMG_9477 (1).jpg">
-            <h2>若干見づらいですが、中に空洞ができました。</h2>
-        </div>
-        <div>
-            <h2>実際に吹いてみます</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/zCiG2csf22A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h2>音が鳴りました。構造は問題ないようですね。<br>しかし、音量は70dB後半といったところ。<br>もう少し音が大きくなるものを作ろうと思います。</h2>
-        </div>
-        <div>
-            <h2>出来ました</h2>
-            <img src="./images/2022-10-15 143034.png"><img src="./images/2022-10-15 143054.png"><br>
-            <a href="./fueramune4.stl">stlファイル</a>
-            <h2>トーラスでドーナツのような形を作り、上下で分割し、下半分を消し去った後、シェルという機能で空洞化しています。<br>ほぼフエラムネの形ができました。<br>
-            先程の作品より空洞が多くなったので、期待できそうです。</h2>
-        </div>
-        <div>
-            <h2>出来上がった物がこれ</h2>
-            <img src="./images/IMG_9489.jpg">
-        </div>
-
-        <div>
-            <h2>実際の動画がこちら</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/B-CXNRAYD3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-            <h2>80dB後半でした。約10dB上昇させる事ができました。成功です。</h2>
-        </div>
-
-        <div class="title">
-            <h1>4.まとめ・感想等</h1>
-
-        </div>
-        <div>
-            <h2>今回は、ピンセットに笛を付け、音のなるピンセットを制作しました。<br>3DCADの使い方や3Dプリンターの機能など、手こずるところもありましたが、<br>
-            最終的には形になって一安心です。<br>今回習得した事を、今後更に活かせるよう、精進いたします。<br>少々長くなってしまいましたが、ご覧下さりありがとうございました。</h2>
-        </div>
-        <div>
-            <h1>以上</h1>
-        </div>
+    <h1>以上</h1>
+  </main>
 </body>
 </html>
