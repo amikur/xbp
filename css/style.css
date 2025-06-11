@@ -577,3 +577,27 @@ margin-right: auto;
   cursor: pointer;
 }
 
+/* ボタンラッパーをセンター寄せ＆上下マージン */
+.xbp-button-wrapper {
+  text-align: center;
+  margin: 60px 0;
+}
+
+/* ボタン本体 */
+.xbp-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  background: linear-gradient(135deg, #4a90e2, #0072c3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* ホバー時の演出 */
+.xbp-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
