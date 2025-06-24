@@ -84,14 +84,21 @@ canvas {
 }
 
 
-/* コンテンツエリア */
 .content {
-    position: relative;
-    margin-top: 150vh; /* KOKI AMIKURA の下に表示 */
+    position: relative;       
+    margin-top: 100px;       
     color: white;
-    text-align: center;
     font-size: 1.5rem;
-}
+    max-width: 900px;
+    width: 90%;
+    text-align: left;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+    padding-top: 120vh; 
+  }
+  
 /*=== スクロールを促すアニメーション ===*/
 
 /* スクロールダウン全体の場所 */
