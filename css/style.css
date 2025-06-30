@@ -57,17 +57,34 @@ body {
     
     
 }
+.XBP-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  max-width: 900px;       /* ← 追加：中央寄せの幅を狭くする */
+  margin-left: auto;      /* ← 中央寄せ */
+}
+
+.XBP-logo-with-line {
+  position: relative;
+  padding-right: 40px;
+}
+
+.XBP-logo-with-line::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  right: 0;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 .XBPclass {
-  font-size: 50px;
-  text-align: center;
-  border-right: 2px solid rgba(0, 0, 0, 0.24);
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 追加することで、横方向にも中央寄せになります */
-  
-  
+  width: 200px;
+  height: auto;
 }
+
 
 
 .de12img {
