@@ -27,33 +27,24 @@
     }
 
     body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background:
-    radial-gradient(circle 600px at 20% 30%, rgba(245,158,75,0.6) 0%, transparent 70%),
-    radial-gradient(circle 600px at 80% 60%, rgba(112,214,255,0.6) 0%, transparent 70%),
-    radial-gradient(circle 600px at 30% 85%, rgba(255,216,158,0.6) 0%, transparent 70%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-  animation: floatBg 30s ease-in-out infinite;
-}
-@keyframes floatBg {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-40px); }
-  100% { transform: translateY(0); }
-
-  50%  { transform: translateY(-40px); }
-  100% { transform: translateY(0); }
-
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background:
+        radial-gradient(circle 600px at 20% 30%, rgba(245,158,75,0.8) 0%, transparent 70%),
+        radial-gradient(circle 600px at 80% 60%, rgba(112,214,255,0.8) 0%, transparent 70%),
+        radial-gradient(circle 600px at 30% 85%, rgba(255,216,158,0.8) 0%, transparent 70%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      animation: floatBg 30s ease-in-out infinite;
+    }
+    @keyframes floatBg {
+      0%   { transform: translateY(0); }
       50%  { transform: translateY(-40px); }
-      100% { transform: translateY(0); }
-    
-      50%  { transform: translateY(-80px); }
       100% { transform: translateY(0); }
     }
 
@@ -232,9 +223,10 @@
           SEAdsは、3Dプリンターやレーザー加工機などのデジタルファブリケーション技術を活用し、ものづくりに触れたことのない方でも楽しめるワークショップを企画・運営している学生団体です。<br />
           “手を動かす楽しさ”と“仲間と作る達成感”を通じて、参加者一人ひとりの好奇心と自己肯定感を育むことを目指しています。
         </p>
-        <div class="about-links">
-          <a href="https://www.seads.info/" target="_blank" rel="noopener noreferrer">公式サイト ▶</a>
-          <a href="https://www.instagram.com/seads_information/" target="_blank" rel="noopener noreferrer">Instagram ▶</a>
+        <div class="about-links" style="text-align:center;">
+          <p style="font-size: 1.2rem; font-weight: bold; color: var(--c-dark); margin-bottom: 10px;">こちらもチェック！</p>
+          <a href="https://www.seads.info/" target="_blank" style="display: inline-block; padding: 10px 20px; background: var(--c-accent); color: #fff; border-radius: 30px; text-decoration: none; margin: 0 10px; font-weight: bold; transition: background 0.3s;">公式サイト</a>
+          <a href="https://www.instagram.com/seads_information/" target="_blank" style="display: inline-block; padding: 10px 20px; background: var(--c-teal); color: #fff; border-radius: 30px; text-decoration: none; margin: 0 10px; font-weight: bold; transition: background 0.3s;">Instagram</a>
         </div>
       </div>
     </section>
