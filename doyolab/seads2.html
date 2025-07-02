@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>学生団体SEAds｜つくるをもっと身近に</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="./images/xbp.ico" />
+  <style>
+    :root {
+      --c-accent: #f59e4b; /* オレンジ */
+      --c-accent-light: #ffd89e; /* 明るいオレンジ */
+      --c-teal: #70d6ff; /* 水色 */
+      --c-bg: #fefdfb;
+      --c-dark: #333;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "M PLUS Rounded 1c", "Segoe UI", sans-serif;
+      color: var(--c-dark);
+      background: var(--c-bg);
+      position: relative;
+    }
+
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:
+    radial-gradient(circle 600px at 20% 30%, rgba(245,158,75,0.6) 0%, transparent 70%),
+    radial-gradient(circle 600px at 80% 60%, rgba(112,214,255,0.6) 0%, transparent 70%),
+    radial-gradient(circle 600px at 30% 85%, rgba(255,216,158,0.6) 0%, transparent 70%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  animation: floatBg 30s ease-in-out infinite;
+}
+@keyframes floatBg {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+
+  50%  { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+
+      50%  { transform: translateY(-40px); }
+      100% { transform: translateY(0); }
+    
+      50%  { transform: translateY(-80px); }
+      100% { transform: translateY(0); }
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,.6);
+      z-index: 1000;
+      transition: box-shadow .3s;
+    }
+    .navbar.scrolled { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+    .navbar img { width: 50px; border-radius: 50%; }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--c-dark);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 3px;
+      background: var(--c-accent);
+      transition: width .3s;
+      border-radius: 2px;
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg,var(--c-accent-light) 0%,var(--c-teal) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: clamp(2rem,5vw,3.5rem);
+      margin: 0 0 1rem;
+      letter-spacing: .05em;
+    }
+    .hero p {
+      font-size: clamp(1rem,2.5vw,1.3rem);
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+    }
+    .cta-btn {
+      padding: 12px 32px;
+      background: #fff;
+      color: var(--c-accent);
+      font-weight: 700;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform .3s;
+    }
+    .cta-btn:hover { transform: translateY(-4px); }
+
+    .section {
+      padding: 100px 5% 80px;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    .section h2::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -12px;
+      width: 80px;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--c-accent);
+    }
+
+    .about-wrapper {
+      display: grid;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .about-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .about-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      color: var(--c-teal);
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .about-links a:hover { opacity: .8; }
+
+    .fb-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .fb-grid iframe, .fb-grid .fb-page {
+      width: 100%;
+      max-width: 500px;
+      border: none;
+      overflow: hidden;
+      min-height: 450px;
+    }
+
+    footer {
+      background: #f5f5dc;
+      text-align: center;
+      padding: 20px 0;
+      font-size: .9rem;
+    }
+
+    @media(max-width:600px) {
+      .hero p { padding: 0 1rem; }
+      .navbar { flex-direction: column; gap: 8px; padding: 8px 5%; }
+    }
+  </style>
+</head>
+<body>
+<!-- rest of the body remains unchanged -->
+
+  <nav class="navbar">
+    <a href="#top"><img src="images/0_XBlogo.png" alt="SEAds" /></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#workshops">Koki's Posts</a></li>
+      <li><a href="#gallery">SEAds FB</a></li>
+    </ul>
+  </nav>
+
+  <header id="top" class="hero">
+    <h1>つくるをもっと身近に</h1>
+    <p>ワクワクするものづくり体験を通じて、子どもも大人も“できた！”を実感できる場を届けます。</p>
+    <a href="#workshops" class="cta-btn">Facebook投稿を見る</a>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>SEAdsについて</h2>
+      <div class="about-wrapper">
+        <p class="about-text">
+          SEAdsは、3Dプリンターやレーザー加工機などのデジタルファブリケーション技術を活用し、ものづくりに触れたことのない方でも楽しめるワークショップを企画・運営している学生団体です。<br />
+          “手を動かす楽しさ”と“仲間と作る達成感”を通じて、参加者一人ひとりの好奇心と自己肯定感を育むことを目指しています。
+        </p>
+        <div class="about-links">
+          <a href="https://www.seads.info/" target="_blank" rel="noopener noreferrer">公式サイト ▶</a>
+          <a href="https://www.instagram.com/seads_information/" target="_blank" rel="noopener noreferrer">Instagram ▶</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="workshops" class="section">
+      <h2>網倉光生 Facebook 投稿</h2>
+      <div class="fb-grid">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D529822213425596%26id%3D100091934651977&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="encrypted-media; picture-in-picture"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D489216104152874%26id%3D100091934651977&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="encrypted-media; picture-in-picture"></iframe>
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D452409487833536%26id%3D100091934651977&show_text=true&width=500" scrolling="no" frameborder="0" allowfullscreen="true" allow="encrypted-media; picture-in-picture"></iframe>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>SEAds 公式Facebook</h2>
+      <div class="fb-grid">
+        <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61560319741849" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 SEAds / Students Engineering & Art design society
+  </footer>
+
+  <script>
+    const nav=document.querySelector(".navbar");
+    window.addEventListener("scroll",()=>{window.pageYOffset>10?nav.classList.add("scrolled"):nav.classList.remove("scrolled")});
+    window.fbAsyncInit=function(){FB.init({xfbml:true,version:"v9.0"});};
+    (function(d,s,id){let js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0";fjs.parentNode.insertBefore(js,fjs);}(document,'script','facebook-jssdk'));
+  </script>
+</body>
+</html>
