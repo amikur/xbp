@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom音声文字起こしサイトの紹介</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>音声文字起こし</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#intro">紹介</a></li>
-                <li><a href="#setup">セットアップ</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使い方ガイド｜リアルタイム文字起こし</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f9fafb;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      h1, h2, h3 {
+        color: #1f2937;
+      }
+    </style>
+  </head>
+  <body class="text-gray-700">
+    <main class="container">
+      <h1 class="text-2xl font-bold mb-6">リアルタイム文字起こし｜使い方ガイド</h1>
 
-    <main>
-        <section id="intro" class="intro">
-            <h2>Zoom音声を文字起こしするためのサイト</h2>
-            <p>
-                講義やZoomミーティングの音声を簡単に文字起こしできるツールです。
-                Macユーザーの方は、以下の方法で「BlackHole」というソフトをインストールし、設定を行うことでスムーズにご利用いただけます。
-            </p>
-        </section>
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">🔰 基本的な使い方</h2>
+        <ol class="list-decimal list-inside space-y-2">
+          <li>ブラウザ（Google Chrome）でこのサイトを開きます。</li>
+          <li>[開始] ボタンをクリックすると、マイク入力の文字起こしが始まります。</li>
+          <li>出力はリアルタイムで左上の欄に表示され、一定量ごとに下の欄に保存されます。</li>
+          <li>「保存用テキスト」はコピーして過去欄に移動できます。</li>
+        </ol>
+      </section>
 
-        <section id="setup" class="setup">
-            <h2>Macでのセットアップ</h2>
-            <ol>
-                <li>
-                    <a href="https://ovaldesign.jp/2023/09/09/blackhole/" target="_blank">BlackHole</a>をインストールしてください。
-                </li>
-                <li>
-                    Audio MIDI設定を開き、「+」ボタンを押して新しい装置を追加します。
-                </li>
-                <li>
-                    BlackHoleを選択し、音声入力・出力のデバイスとして設定します。
-                </li>
-                <li>
-                    Zoomのオーディオ設定を開き、マイクとスピーカーにBlackHoleを選択します。
-                </li>
-            </ol>
-        </section>
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">🎧 Zoomなどの音声を文字起こししたい場合（Mac）</h2>
+        <p class="mb-2">Zoomなどの他アプリの音声を認識するには、システム音声を仮想マイクとして扱う必要があります。</p>
+        <p class="mb-2">Macの場合、<strong>BlackHole</strong> という無料の仮想オーディオデバイスを使います。</p>
+        <ol class="list-decimal list-inside space-y-2">
+          <li><a href="https://existential.audio/blackhole/" class="text-blue-600 underline" target="_blank">BlackHole公式サイト</a> からダウンロード・インストールします（"2ch" バージョンでOK）。</li>
+          <li>Macの「Audio MIDI設定」アプリを開き、「複数出力装置」を作成します。</li>
+          <li>複数出力に「BlackHole」と「内蔵スピーカー」を追加。</li>
+          <li>Zoomの出力デバイスを「複数出力装置」に変更。</li>
+          <li>ブラウザでこのサイトを開き、音声認識を開始するとZoomの音声が取得できます。</li>
+        </ol>
+      </section>
 
-        <section id="contact" class="contact">
-            <h2>お問い合わせ</h2>
-            <p>
-                ご不明点やサポートが必要な場合は、お気軽にお問い合わせください。
-            </p>
-            <form action="process_form.php" method="POST">
-              <input type="text" name="name" placeholder="お名前" required>
-              <input type="email" name="email" placeholder="メールアドレス" required>
-              <textarea name="message" placeholder="メッセージ" required></textarea>
-              <button type="submit">送信</button>
-          </form>          
-        </section>
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">🔠 固有名詞を正しく表示させるには？</h2>
+        <p class="mb-2">自分の名前や会社名などがうまく認識されない場合、<strong>「固有名詞管理」</strong> ボタンから修正ルールを登録できます。</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>例えば「どうようだいすけ → 道用大介」といったように、読みと置換後の文字を登録。</li>
+          <li>登録した内容はローカルに保存され、音声認識時に自動で変換されます。</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">💡 よくある質問</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>⚠️ iPhoneやSafariでは音声認識が正しく動作しない場合があります。Chromeを使用してください。</li>
+          <li>🔋 バッテリーを多く消費するため、長時間使用時は電源接続を推奨します。</li>
+          <li>🔒 音声データはサーバーに送信されず、全てローカルで処理されます。</li>
+        </ul>
+      </section>
+
+      <footer class="text-sm text-gray-400 border-t pt-6">
+        &copy; 2025 リアルタイム文字起こしプロジェクト
+      </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2024 音声文字起こしサイト. All Rights Reserved.</p>
-    </footer>
-</body>
+  </body>
 </html>
