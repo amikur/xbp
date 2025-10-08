@@ -78,5 +78,5 @@ function deleteName(pronunciation) {
 window.addEventListener('load', updateNameList);
 
 document.getElementById('back-to-transcription-btn').addEventListener('click', function() {
-    window.location.href = 'test2.html'; // 文字起こしページへのリンク
+    window.location.href = 'cheindex.html'; // 文字起こしページへのリンク
 });
