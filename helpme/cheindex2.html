@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>リアルタイム文字起こし</title>
+    <link rel="stylesheet" href="./css/chstyle.css">
+    <link rel="icon" href="./images/seadsicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="button-container">
+    <button id="start-btn">音声認識を開始</button>
+    <button id="stop-btn">音声認識を停止</button>
+    <button id="reset-btn">リセット</button> <!-- リセットボタン -->
+    <button id="goto-name-management-btn"class="button-differentiated">固有名詞登録ページへ</button> <!-- 固有名詞登録ページへのボタン -->
+    
+</div>
+<div class="textareas-container">
+    <div class="left-container">
+    <h4>リアルタイム文字起こし</h4>
+    <textarea id="realtime-output" rows="20" disabled></textarea>
+    </div>
+  
+    <div class="right-container">
+    <h4>要約待ちのテキスト</h4>
+    <textarea id="saved-text" rows="20"></textarea>
+    </div>
+</div>
+    <div id="copy-btn-container">
+    <button id="copy-btn">テキストをコピーして<br>過去の内容に移動</button>
+    </div>
+    <div class="past-container">
+    <p>過去の内容（コピーされたテキストは全てこのテキストボックスに移動します）</p>
+    <textarea id="past-contents" rows="15"></textarea>
+    </div>
+
+    <script src="./javascript/test.js"></script>
+</body>
+</html>
