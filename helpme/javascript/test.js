@@ -157,5 +157,5 @@ window.addEventListener('load', function () {
     savedText.value = localStorage.getItem('savedText') || '';
     pastContents.value = localStorage.getItem('pastContents') || '';
 
-    langToggleBtn.textContent = recognition.lang === 'ja-JP' ? 'Englishに切り替え' : 'Switch to Japanese';
+    langToggleBtn.textContent = recognition.lang === 'ja-JP' ? '英語に切り替え' : 'Switch to Japanese';
 });
